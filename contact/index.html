@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contact - Tiyada Maiwong</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1337",
+                        "primary-light": "#ffdddd",
+                        "primary-dark": "#b90e0e",
+                        "secondary": "#FFE0D6",
+                        "background-light": "#ffffff",
+                        "background-dark": "#221010",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1e1515",
+                        "text-main": "#181111",
+                        "text-light": "#f4f0f1",
+                        "neutral-border": "#f4f0f1",
+                        "text-muted": "#6b6b6b"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-gray-100 transition-colors duration-200">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <!-- Navbar -->
+        <nav class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+            <div class="px-6 md:px-10 lg:px-40 py-3 flex items-center justify-between">
+                <div class="flex items-center gap-4 text-text-main dark:text-white">
+                    <div class="size-8 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-3xl">code</span>
+                    </div>
+                    <h2 class="text-lg font-bold leading-tight tracking-tight">Tiyada Maiwong</h2>
+                </div>
+                <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                    <div class="flex items-center gap-9">
+                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="../index.html">Home</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="../about/index.html">About</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="../projects/index.html">Projects</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="../skills/index.html">Skills</a>
+                        <a class="text-sm font-bold text-primary" href="#">Contact</a>
+                    </div>
+                    <a href="#" class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary hover:bg-primary-dark text-white text-sm font-bold transition-all shadow-md hover:shadow-lg">
+                        <span class="truncate">Get in Touch</span>
+                    </a>
+                </div>
+                <!-- Mobile Menu Icon -->
+                <button id="mobile-menu-btn" class="md:hidden text-text-main dark:text-white">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-background-dark py-4 px-6">
+                <div class="flex flex-col gap-3">
+                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary py-2 block" href="../index.html">Home</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary py-2 block" href="../about/index.html">About</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary py-2 block" href="../projects/index.html">Projects</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary py-2 block" href="../skills/index.html">Skills</a>
+                    <a class="text-sm font-bold text-primary py-2 block" href="#">Contact</a>
+                    <a href="#" class="mt-2 text-center flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary hover:bg-primary-dark text-white text-sm font-bold transition-all shadow-md hover:shadow-lg">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Contact Section -->
+        <section class="px-6 md:px-10 lg:px-40 py-16 flex justify-center" id="contact">
+            <div class="max-w-[960px] w-full">
+                <div class="text-center mb-12">
+                    <h1 class="text-3xl md:text-4xl font-black text-text-main dark:text-white mb-4">Get In Touch</h1>
+                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">I'm currently open to Director, Sr. Director, and VP opportunities in Product & Commercial Leadership.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h2 class="text-2xl font-bold text-text-main dark:text-white mb-6">Contact Information</h2>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="mt-1 text-primary">
+                                    <span class="material-symbols-outlined">mail</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg text-text-main dark:text-white">Email</h3>
+                                    <a href="mailto:contact@tiyada.com" class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">contact@tiyada.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="mt-1 text-primary">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg text-text-main dark:text-white">Location</h3>
+                                    <p class="text-gray-600 dark:text-gray-400">Available for remote and global opportunities</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="mt-1 text-primary">
+                                    <span class="material-symbols-outlined">link</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg text-text-main dark:text-white">Professional Links</h3>
+                                    <div class="flex gap-4 mt-2">
+                                        <a href="#" class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" aria-label="LinkedIn">
+                                            <span class="material-symbols-outlined">badge</span>
+                                        </a>
+                                        <a href="#" class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" aria-label="Twitter">
+                                            <span class="material-symbols-outlined">business</span>
+                                        </a>
+                                        <a href="#" class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" aria-label="Email">
+                                            <span class="material-symbols-outlined">mail</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-12">
+                            <h2 class="text-2xl font-bold text-text-main dark:text-white mb-6">Frequently Asked Questions</h2>
+                            
+                            <div class="space-y-4">
+                                <div class="border-b border-gray-200 dark:border-gray-700 pb-4">
+                                    <h3 class="font-bold text-lg text-text-main dark:text-white">What industries do you specialize in?</h3>
+                                    <p class="text-gray-600 dark:text-gray-400 mt-2">I specialize in AdTech, Healthcare, and Pet industries, with deep experience in high-compliance environments requiring both technical and commercial expertise.</p>
+                                </div>
+                                
+                                <div class="border-b border-gray-200 dark:border-gray-700 pb-4">
+                                    <h3 class="font-bold text-lg text-text-main dark:text-white">What leadership roles are you seeking?</h3>
+                                    <p class="text-gray-600 dark:text-gray-400 mt-2">I'm open to Director, Sr. Director, and VP positions in Product Management and Commercial Leadership, focusing on scaling businesses in regulated environments.</p>
+                                </div>
+                                
+                                <div class="pb-4">
+                                    <h3 class="font-bold text-lg text-text-main dark:text-white">How do you approach product-market fit in complex industries?</h3>
+                                    <p class="text-gray-600 dark:text-gray-400 mt-2">I bridge the gap between financial rigor and commercial product success, using data-driven decisions while maintaining customer-centric vision.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h2 class="text-2xl font-bold text-text-main dark:text-white mb-6">Send a Message</h2>
+                        
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Full Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-background-dark text-text-main dark:text-white focus:ring-primary focus:border-primary transition-colors">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-background-dark text-text-main dark:text-white focus:ring-primary focus:border-primary transition-colors">
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
+                                <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-background-dark text-text-main dark:text-white focus:ring-primary focus:border-primary transition-colors">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Message</label>
+                                <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-background-dark text-text-main dark:text-white focus:ring-primary focus:border-primary transition-colors"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary-dark text-white text-base font-bold shadow-lg shadow-primary/30 transition-colors">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-text-main dark:bg-black text-white py-12 px-6 md:px-10 lg:px-40 mt-auto">
+            <div class="max-w-[960px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex flex-col gap-2 text-center md:text-left">
+                    <h4 class="text-xl font-bold">Tiyada Maiwong</h4>
+                    <p class="text-gray-400 text-sm">Executive Product Leadership</p>
+                </div>
+                <div class="flex gap-6">
+                    <a class="text-gray-400 hover:text-white transition-colors" href="../index.html">Home</a>
+                    <a class="text-gray-400 hover:text-white transition-colors" href="../about/index.html">About</a>
+                    <a class="text-gray-400 hover:text-white transition-colors" href="../projects/index.html">Projects</a>
+                </div>
+            </div>
+            <div class="max-w-[960px] mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-xs">
+                © 2025 Tiyada Maiwong. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
