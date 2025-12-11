@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Guidelines - Tiyada Maiwong Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1337",
+                        "primary-light": "#ffdddd",
+                        "primary-dark": "#b90e0e",
+                        "secondary": "#FFE0D6",
+                        "background-light": "#ffffff",
+                        "background-dark": "#221010",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1e1515",
+                        "text-main": "#181111",
+                        "text-light": "#f4f0f1",
+                        "neutral-border": "#f4f0f1",
+                        "text-muted": "#6b6b6b"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        .section {
+            margin-bottom: 2.5rem;
+            padding: 2rem 0;
+        }
+        .color-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .component-demo {
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+        }
+        .dark .component-demo {
+            background-color: #1f2937;
+            border-color: #374151;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-gray-100 transition-colors duration-200">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+            <div class="px-6 md:px-10 lg:px-40 py-3 flex items-center justify-between">
+                <div class="flex items-center gap-4 text-text-main dark:text-white">
+                    <div class="size-8 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-3xl">palette</span>
+                    </div>
+                    <h2 class="text-lg font-bold leading-tight tracking-tight">Design Guidelines</h2>
+                </div>
+                <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                    <div class="flex items-center gap-9">
+                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="#colors">Colors</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="#typography">Typography</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="#layout">Layout</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="#components">Components</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="px-6 md:px-10 lg:px-40 py-12 md:py-20 flex justify-center">
+            <div class="max-w-[960px] w-full flex flex-col md:flex-row gap-10 items-center">
+                <div class="w-full md:w-1/2 flex flex-col gap-6 text-left">
+                    <div>
+                        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Design System</span>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-text-main dark:text-white mb-4">
+                            Design Guidelines
+                        </h1>
+                        <h2 class="text-lg md:text-xl font-normal leading-relaxed text-gray-700 dark:text-gray-300">
+                            A comprehensive guide to the design elements, patterns, and principles used in the Tiyada Maiwong portfolio website.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Colors Section -->
+        <section class="px-6 md:px-10 lg:px-40 py-16 flex justify-center" id="colors">
+            <div class="max-w-[960px] w-full">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-black text-text-main dark:text-white mb-4">Color Palette</h2>
+                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">The primary and secondary colors that define the brand identity and provide a consistent visual experience.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Primary Color -->
+                    <div class="text-center">
+                        <div class="color-box" style="background-color: #ec1337;">
+                            <span class="text-white text-xs font-bold">Primary</span>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-bold text-text-main dark:text-white">#ec1337</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Used for accents, CTAs, and highlights</p>
+                        </div>
+                    </div>
+
+                    <!-- Secondary Color -->
+                    <div class="text-center">
+                        <div class="color-box" style="background-color: #FFE0D6;">
+                            <span class="text-text-main text-xs font-bold">Secondary</span>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-bold text-text-main dark:text-white">#FFE0D6</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Used for backgrounds and subtle highlights</p>
+                        </div>
+                    </div>
+
+                    <!-- Primary Dark -->
+                    <div class="text-center">
+                        <div class="color-box" style="background-color: #b90e0e;">
+                            <span class="text-white text-xs font-bold">Primary Dark</span>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-bold text-text-main dark:text-white">#b90e0e</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Used for hover states and accents</p>
+                        </div>
+                    </div>
+
+                    <!-- Primary Light -->
+                    <div class="text-center">
+                        <div class="color-box" style="background-color: #ffdddd;">
+                            <span class="text-text-main text-xs font-bold">Primary Light</span>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-bold text-text-main dark:text-white">#ffdddd</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Used for subtle backgrounds</p>
+                        </div>
+                    </div>
+
+                    <!-- Background Light -->
+                    <div class="text-center">
+                        <div class="color-box" style="background-color: #ffffff; border: 1px solid #e5e7eb;">
+                            <span class="text-text-main text-xs font-bold">Background Light</span>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-bold text-text-main dark:text-white">#ffffff</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Main background color for light mode</p>
+                        </div>
+                    </div>
+
+                    <!-- Background Dark -->
+                    <div class="text-center">
+                        <div class="color-box" style="background-color: #221010;">
+                            <span class="text-white text-xs font-bold">Background Dark</span>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-bold text-text-main dark:text-white">#221010</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Main background color for dark mode</p>
+                        </div>
+                    </div>
+
+                    <!-- Card Light -->
+                    <div class="text-center">
+                        <div class="color-box" style="background-color: #ffffff; border: 1px solid #e5e7eb;">
+                            <span class="text-text-main text-xs font-bold">Card Light</span>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-bold text-text-main dark:text-white">#ffffff</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Background for cards in light mode</p>
+                        </div>
+                    </div>
+
+                    <!-- Card Dark -->
+                    <div class="text-center">
+                        <div class="color-box" style="background-color: #1e1515;">
+                            <span class="text-white text-xs font-bold">Card Dark</span>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-bold text-text-main dark:text-white">#1e1515</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Background for cards in dark mode</p>
+                        </div>
+                    </div>
+
+                    <!-- Text Main -->
+                    <div class="text-center">
+                        <div class="color-box" style="background-color: #181111; display: flex; align-items: center; justify-content: center;">
+                            <span class="text-white text-xs font-bold">Text Main</span>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-bold text-text-main dark:text-white">#181111</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Primary text color in light mode</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography Section -->
+        <section class="px-6 md:px-10 lg:px-40 py-16 bg-white dark:bg-background-dark" id="typography">
+            <div class="max-w-[960px] w-full">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-black text-text-main dark:text-white mb-4">Typography</h2>
+                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">The font family and hierarchy used for consistent and readable text throughout the website.</p>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Font Family -->
+                    <div class="section">
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4">Font Family</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">The website uses <strong>Inter</strong> as the primary font family for all text elements.</p>
+                        <div class="component-demo">
+                            <p class="font-display text-3xl font-black">Aa Inter Black</p>
+                            <p class="font-display text-2xl font-bold">Aa Inter Bold</p>
+                            <p class="font-display text-xl font-medium">Aa Inter Medium</p>
+                            <p class="font-display text-lg">Aa Inter Regular</p>
+                            <p class="font-display text-base">Aa Inter Default</p>
+                            <p class="font-display text-sm">Aa Inter Small</p>
+                        </div>
+                    </div>
+
+                    <!-- Typography Scale -->
+                    <div class="section">
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4">Typography Scale</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <h1 class="text-5xl font-black">H1 Heading</h1>
+                                <p class="text-gray-500">5xl - 3rem - font-black</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <h2 class="text-4xl font-black">H2 Heading</h2>
+                                <p class="text-gray-500">4xl - 2.25rem - font-black</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <h3 class="text-3xl font-bold">H3 Heading</h3>
+                                <p class="text-gray-500">3xl - 1.875rem - font-bold</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <h4 class="text-2xl font-bold">H4 Heading</h4>
+                                <p class="text-gray-500">2xl - 1.5rem - font-bold</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <h5 class="text-xl font-bold">H5 Heading</h5>
+                                <p class="text-gray-500">xl - 1.25rem - font-bold</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <h6 class="text-lg font-bold">H6 Heading</h6>
+                                <p class="text-gray-500">lg - 1.125rem - font-bold</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text Styles -->
+                    <div class="section">
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4">Text Styles</h3>
+                        <div class="component-demo">
+                            <p class="text-2xl font-bold text-text-main dark:text-white">Large Bold Text</p>
+                            <p class="text-lg font-medium text-text-main dark:text-white">Medium Text</p>
+                            <p class="text-base text-gray-600 dark:text-gray-400">Base text with muted color</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-500">Small text with even more muted color</p>
+                            <p class="text-xs text-gray-400 dark:text-gray-600">Extra small text with the most muted color</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Layout Section -->
+        <section class="px-6 md:px-10 lg:px-40 py-16 flex justify-center" id="layout">
+            <div class="max-w-[960px] w-full">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-black text-text-main dark:text-white mb-4">Layout & Spacing</h2>
+                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">The grid system, spacing units, and responsive breakpoints used throughout the website.</p>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Grid System -->
+                    <div class="section">
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4">Grid System</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">The layout uses a responsive grid system with different column counts based on screen size:</p>
+                        <ul class="list-disc pl-6 space-y-2 text-gray-600 dark:text-gray-400">
+                            <li><strong>Mobile:</strong> Single column layout</li>
+                            <li><strong>Tablet:</strong> 2-column grid for some sections</li>
+                            <li><strong>Desktop:</strong> 3-column grid for skills and features</li>
+                        </ul>
+                    </div>
+
+                    <!-- Spacing -->
+                    <div class="section">
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4">Spacing System</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="p-4 border rounded text-center">
+                                <div class="h-4 w-4 bg-primary mx-auto mb-2"></div>
+                                <p class="text-xs">4px / 1</p>
+                            </div>
+                            <div class="p-4 border rounded text-center">
+                                <div class="h-6 w-6 bg-primary mx-auto mb-2"></div>
+                                <p class="text-xs">6px / 1.5</p>
+                            </div>
+                            <div class="p-4 border rounded text-center">
+                                <div class="h-8 w-8 bg-primary mx-auto mb-2"></div>
+                                <p class="text-xs">8px / 2</p>
+                            </div>
+                            <div class="p-4 border rounded text-center">
+                                <div class="h-12 w-12 bg-primary mx-auto mb-2"></div>
+                                <p class="text-xs">12px / 3</p>
+                            </div>
+                            <div class="p-4 border rounded text-center">
+                                <div class="h-16 w-16 bg-primary mx-auto mb-2"></div>
+                                <p class="text-xs">16px / 4</p>
+                            </div>
+                            <div class="p-4 border rounded text-center">
+                                <div class="h-20 w-20 bg-primary mx-auto mb-2"></div>
+                                <p class="text-xs">20px / 5</p>
+                            </div>
+                            <div class="p-4 border rounded text-center">
+                                <div class="h-24 w-24 bg-primary mx-auto mb-2"></div>
+                                <p class="text-xs">24px / 6</p>
+                            </div>
+                            <div class="p-4 border rounded text-center">
+                                <div class="h-32 w-32 bg-primary mx-auto mb-2"></div>
+                                <p class="text-xs">32px / 8</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Breakpoints -->
+                    <div class="section">
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4">Breakpoints</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="p-4 border rounded">
+                                <h4 class="font-bold mb-2">Small (Mobile)</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Up to 640px</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-500">px-6 py-8</p>
+                            </div>
+                            <div class="p-4 border rounded">
+                                <h4 class="font-bold mb-2">Medium (Tablet)</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">640px to 1024px</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-500">md:px-10 md:py-12</p>
+                            </div>
+                            <div class="p-4 border rounded">
+                                <h4 class="font-bold mb-2">Large (Desktop)</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">1024px+</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-500">lg:px-40 lg:py-16</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Container Widths -->
+                    <div class="section">
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4">Container Widths</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">The website maintains a consistent max-width of 960px (96rem) for content containers:</p>
+                        <div class="component-demo">
+                            <div class="max-w-[960px] bg-secondary p-4 text-center rounded">
+                                <p class="text-text-main">Max container width</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Components Section -->
+        <section class="px-6 md:px-10 lg:px-40 py-16 bg-white dark:bg-background-dark" id="components">
+            <div class="max-w-[960px] w-full">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-black text-text-main dark:text-white mb-4">Components</h2>
+                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Reusable UI components with consistent design patterns and behaviors.</p>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Buttons -->
+                    <div class="section">
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4">Buttons</h3>
+                        <div class="flex flex-wrap gap-4 component-demo">
+                            <button class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary-dark text-white text-base font-bold shadow-lg shadow-primary/30 transition-all">
+                                Primary Button
+                            </button>
+                            <button class="flex items-center justify-center rounded-lg h-12 px-6 bg-transparent border-2 border-gray-200 dark:border-gray-700 hover:border-primary text-text-main dark:text-white hover:text-primary font-bold transition-all">
+                                Secondary Button
+                            </button>
+                            <button class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary-dark text-white text-base font-bold shadow-lg shadow-primary/30 transition-all opacity-50">
+                                Disabled Button
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Cards -->
+                    <div class="section">
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4">Cards</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-white dark:bg-card-dark rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all">
+                                <div class="flex items-start justify-between mb-4">
+                                    <div class="p-3 bg-secondary/30 rounded-lg text-primary">
+                                        <span class="material-symbols-outlined text-3xl">inventory_2</span>
+                                    </div>
+                                </div>
+                                <h3 class="text-xl font-bold text-text-main dark:text-white mb-4">Card Title</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">This is a sample card component with consistent styling and spacing.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Tag 1</span>
+                                    <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Tag 2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Badges -->
+                    <div class="section">
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4">Badges</h3>
+                        <div class="flex flex-wrap gap-4 component-demo">
+                            <span class="inline-flex items-center px-3 py-1 rounded bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary text-sm font-medium">Primary Badge</span>
+                            <span class="inline-flex items-center px-3 py-1 rounded bg-secondary/10 dark:bg-secondary/20 text-secondary dark:text-secondary text-sm font-medium">Secondary Badge</span>
+                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-medium">Gray Badge</span>
+                        </div>
+                    </div>
+
+                    <!-- Form Elements -->
+                    <div class="section">
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4">Form Elements</h3>
+                        <div class="component-demo">
+                            <form class="space-y-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
+                                    <input 
+                                        type="text" 
+                                        id="name" 
+                                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-background-dark text-text-main dark:text-white focus:ring-primary focus:border-primary transition-colors"
+                                        placeholder="Enter your name">
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-background-dark text-text-main dark:text-white focus:ring-primary focus:border-primary transition-colors"
+                                        placeholder="Enter your email">
+                                </div>
+                                
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
+                                    <textarea 
+                                        id="message" 
+                                        rows="4"
+                                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-background-dark text-text-main dark:text-white focus:ring-primary focus:border-primary transition-colors"
+                                        placeholder="Enter your message"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary-dark text-white text-base font-bold shadow-lg shadow-primary/30 transition-colors">
+                                    Submit Form
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Icons -->
+                    <div class="section">
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4">Icons</h3>
+                        <div class="flex flex-wrap gap-4 component-demo">
+                            <div class="size-12 rounded-full bg-secondary flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">lightbulb</span>
+                            </div>
+                            <div class="size-12 rounded-full bg-secondary flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">campaign</span>
+                            </div>
+                            <div class="size-12 rounded-full bg-secondary flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">groups</span>
+                            </div>
+                            <div class="size-12 rounded-full bg-secondary flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">pets</span>
+                            </div>
+                            <div class="size-12 rounded-full bg-secondary flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">medical_services</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="section">
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4">Navigation</h3>
+                        <div class="component-demo">
+                            <nav class="bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 rounded-lg p-4">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-4 text-text-main dark:text-white">
+                                        <div class="size-8 flex items-center justify-center text-primary">
+                                            <span class="material-symbols-outlined text-3xl">resume</span>
+                                        </div>
+                                        <h2 class="text-lg font-bold leading-tight tracking-tight">Tiyada Maiwong</h2>
+                                    </div>
+                                    <div class="hidden md:flex gap-8 items-center">
+                                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary">Home</a>
+                                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary">About</a>
+                                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary">Projects</a>
+                                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary">Skills</a>
+                                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary">Contact</a>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-text-main dark:bg-black text-white py-12 px-6 md:px-10 lg:px-40">
+            <div class="max-w-[960px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex flex-col gap-2 text-center md:text-left">
+                    <h4 class="text-xl font-bold">Design Guidelines</h4>
+                    <p class="text-gray-400 text-sm">Tiyada Maiwong Portfolio Website</p>
+                </div>
+                <div class="flex gap-6">
+                    <a class="text-gray-400 hover:text-white transition-colors" href="#colors">Colors</a>
+                    <a class="text-gray-400 hover:text-white transition-colors" href="#typography">Typography</a>
+                    <a class="text-gray-400 hover:text-white transition-colors" href="#layout">Layout</a>
+                    <a class="text-gray-400 hover:text-white transition-colors" href="#components">Components</a>
+                </div>
+            </div>
+            <div class="max-w-[960px] mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-xs">
+                © 2025 Tiyada Maiwong. All rights reserved.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

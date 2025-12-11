@@ -141,9 +141,14 @@ textarea:focus {
   nav, footer {
     display: none;
   }
-  
+
   body {
     padding: 0;
     margin: 0;
   }
+}
+
+/* Hide projects section */
+#projects {
+    display: none;
 }
