@@ -4,88 +4,137 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Tiyada Maiwong - Executive Product Leader</title>
-    <!-- Fonts -->
+    <!-- External CSS links -->
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <!-- Theme Configuration -->
-    <script id="tailwind-config">
+    <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
                         "primary": "#ec1337",
-                        "primary-light": "#ffdddd",
-                        "primary-dark": "#b90e0e",
-                        "secondary": "#FFE0D6",
-                        "background-light": "#ffffff",
-                        "background-dark": "#221010",
+                        "primary-dark": "#c90f2e",
+                        "peach": "#ffd8d0",
+                        "peach-dark": "#896168",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221013",
                         "card-light": "#ffffff",
-                        "card-dark": "#1e1515",
-                        "text-main": "#181111",
-                        "text-light": "#f4f0f1",
-                        "neutral-border": "#f4f0f1",
-                        "text-muted": "#6b6b6b"
+                        "card-dark": "#2d1519",
+                        "text-main": "#181112",
+                        "peach-light": "#fff5f2",
+                        "peach-dark": "#e6a89c",
+                        "text-muted": "#5c4a4e",
+                        "surface-light": "#fdfdfd",
+                        "surface-dark": "#2a1515",
+                        "accent-line": "#ec1337",
+                        "secondary": "#FFE0D6",
+                        "primary-light": "#ffdddd",
                     },
                     fontFamily: {
                         "display": ["Inter", "sans-serif"],
                         "body": ["Inter", "sans-serif"]
                     },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
                 },
             },
         }
     </script>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-gray-100 transition-colors duration-200">
-    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-        <!-- Navbar -->
-        <nav class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
-            <div class="px-6 md:px-10 lg:px-40 py-3 flex items-center justify-between">
-                <div class="flex items-center gap-4 text-text-main dark:text-white">
-                    <div class="size-8 flex items-center justify-center text-primary">
-                        <span class="material-symbols-outlined text-3xl">resume</span>
+<body class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased overflow-x-hidden">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Navigation -->
+        <nav class="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md dark:border-gray-800 dark:bg-background-dark/90">
+            <div class="flex h-20 items-center justify-between px-4 sm:px-8 lg:px-20 xl:px-40">
+                <div class="flex items-center gap-4">
+                    <div class="flex size-10 items-center justify-center rounded-lg bg-primary text-white shadow-lg shadow-primary/30">
+                        <span class="font-black text-xl tracking-tighter">TM</span>
                     </div>
-                    <h2 class="text-lg font-bold leading-tight tracking-tight">Tiyada Maiwong</h2>
-                </div>
-                <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
-                    <div class="flex items-center gap-9">
-                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="#about">Home</a>
-                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="#about-section">About</a>
-                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="#skills">Skills</a>
-                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="#contact">Contact</a>
+                    <div class="hidden sm:block">
+                        <h2 class="text-lg font-bold leading-none tracking-tight dark:text-white">Tiyada Maiwong</h2>
+                        <span class="text-xs text-gray-500 font-medium tracking-wide uppercase dark:text-gray-400">Executive Product Leader</span>
                     </div>
-                    <button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary hover:bg-primary-dark text-white text-sm font-bold transition-all shadow-md hover:shadow-lg">
-                        <span class="truncate">Download Resume</span>
-                    </button>
                 </div>
-                <!-- Mobile Menu Icon -->
-                <button id="mobile-menu-btn" class="md:hidden text-text-main dark:text-white">
-                    <span class="material-symbols-outlined">menu</span>
-                </button>
-            </div>
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-background-dark py-4 px-6">
-                <div class="flex flex-col gap-3">
-                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary py-2 block" href="#about">Home</a>
-                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary py-2 block" href="#about-section">About</a>
-                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary py-2 block" href="#skills">Skills</a>
-                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary py-2 block" href="#contact">Contact</a>
-                    <button class="mt-2 text-center flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary hover:bg-primary-dark text-white text-sm font-bold transition-all shadow-md hover:shadow-lg">
-                        Download Resume
-                    </button>
+                <div class="hidden items-center gap-8 md:flex">
+                    <a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="index.html">Home</a>
+                    <a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="about_me/code.html">About</a>
+                    <a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="career_highlights_/_experience/code.html">Experience</a>
+                    <a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="skills_&_expertise/code.html">Skills</a>
+                    <a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="index.html#portfolio">Portfolio</a>
+                    <a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="contact/code.html">Contact</a>
+                </div>
+                <div class="flex items-center gap-4">
                 </div>
             </div>
         </nav>
 
         <!-- Hero Section -->
-        <section class="px-6 md:px-10 lg:px-40 py-12 md:py-20 flex justify-center" id="about">
+        <header class="relative flex flex-col items-center justify-center overflow-hidden px-4 py-16 sm:px-8 lg:px-20 xl:px-40 lg:py-24 hero-pattern">
+            <div class="absolute top-0 right-0 -mt-20 -mr-20 h-96 w-96 rounded-full bg-peach/20 blur-3xl filter"></div>
+            <div class="absolute bottom-0 left-0 -mb-20 -ml-20 h-96 w-96 rounded-full bg-primary/5 blur-3xl filter"></div>
+            <div class="layout-content-container flex w-full max-w-[1400px] flex-col z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                    <div class="lg:col-span-7 flex flex-col gap-8 text-left animate-fade-in-up">
+                        <div class="flex flex-col gap-6">
+                            <span class="w-fit rounded-full bg-peach/40 border border-peach px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary dark:bg-primary/20 dark:border-primary/30 dark:text-primary-300">
+                                Strategic Product Leadership
+                            </span>
+                            <h1 class="text-4xl font-black leading-[1.1] tracking-tight text-gray-900 sm:text-5xl lg:text-6xl dark:text-white">
+                                Executive Product Leader Driving Growth Through <span class="text-primary relative inline-block">Strategy, Innovation<svg class="absolute w-full h-3 -bottom-1 left-0 text-peach z-[-1]" preserveAspectRatio="none" viewBox="0 0 100 10"><path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" stroke-width="8"></path></svg></span> &amp; Digital Excellence.
+                            </h1>
+                            <h2 class="text-xl font-bold text-gray-400 dark:text-gray-500">
+                                Where Strategy Meets Innovation: Building Products That Drive Business Growth.
+                            </h2>
+                            <p class="text-lg leading-relaxed text-gray-600 dark:text-gray-300 max-w-2xl border-l-4 border-primary pl-6">
+                                Tiyada 'Tik' Maiwong brings extensive experience in strategic commercial product leadership across digital media, healthcare, pet products, and performance advertising. Known for blending data insight, customer understanding, and product innovation—Tik builds commercial products that scale, convert, and generate measurable revenue impact.
+                            </p>
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 max-w-2xl italic">
+                                "Story-driven, insight-led, and user-obsessed. I build digital experiences that blend creativity, data, and seamless product design—turning ideas into products people love and businesses rely on."
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-4 pt-4">
+                            <!-- <button class="group flex h-14 min-w-[180px] cursor-pointer items-center justify-center rounded-lg bg-primary px-8 text-base font-bold text-white shadow-lg shadow-primary/30 transition-all hover:scale-105 hover:bg-red-600">
+                                Download Resume
+                                <span class="ml-2 material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+                            </button> -->
+                            <button class="flex h-14 min-w-[180px] cursor-pointer items-center justify-center rounded-lg border-2 border-gray-200 bg-white px-8 text-base font-bold text-gray-900 transition-all hover:border-primary hover:text-primary hover:shadow-md dark:border-gray-700 dark:bg-transparent dark:text-white dark:hover:border-primary">
+                                View Portfolio
+                            </button>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 relative flex justify-center lg:justify-end animate-fade-in-up" style="animation-delay: 0.2s;">
+                        <div class="relative w-full max-w-[500px] aspect-[4/5] sm:aspect-square lg:aspect-[4/5]">
+                            <div class="h-full w-full overflow-hidden rounded-2xl">
+                                <img alt="Tiyada Maiwong Professional Portrait" class="h-full w-full object-cover" src="images/Profile-Website-Tiyada-1.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- About Section (Hidden) -->
+        <!--
+        <section id="about" class="px-6 md:px-10 lg:px-40 py-12 md:py-20 flex justify-center">
             <div class="max-w-[960px] w-full flex flex-col md:flex-row gap-10 items-center">
                 <div class="w-full md:w-1/2 flex flex-col gap-6 text-left order-2 md:order-1">
                     <div>
@@ -94,945 +143,329 @@
                             Hi, I'm Tik.
                         </h1>
                         <h2 class="text-lg md:text-xl font-normal leading-relaxed text-gray-700 dark:text-gray-300">
-                            I bridge the gap between <span class="text-primary font-bold">financial rigor</span> and <span class="text-primary font-bold">commercial product success</span>.
+                            I bridge the gap between <span class="text-primary font-bold">business strategy</span> and <span class="text-primary font-bold">product execution</span>.
                         </h2>
                         <p class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
                             As an Executive Product Leader, I translate market needs into scalable solutions across AdTech, Healthcare, and CPG industries. My superpower is speaking the languages of Engineering, Sales, and Finance fluently.
                         </p>
                     </div>
                     <div class="flex gap-4 mt-2">
-                        <a href="#journey" class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary-dark text-white text-base font-bold shadow-lg shadow-primary/30 transition-all">
+                        <button class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary-dark text-white text-base font-bold shadow-lg shadow-primary/30 transition-all">
                             View Career Journey
-                        </a>
-                        <a href="#contact" class="flex items-center justify-center rounded-lg h-12 px-6 bg-transparent border-2 border-gray-200 dark:border-gray-700 hover:border-primary text-text-main dark:text-white hover:text-primary font-bold transition-all">
+                        </button>
+                        <button class="flex items-center justify-center rounded-lg h-12 px-6 bg-transparent border-2 border-gray-200 dark:border-gray-700 hover:border-primary text-text-main dark:text-white hover:text-primary font-bold transition-all">
                             Contact Me
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
                     <div class="relative w-full max-w-[400px] aspect-square">
-                        <div class="absolute inset-0 bg-secondary/30 dark:bg-secondary/30 rounded-full blur-2xl transform translate-x-4 translate-y-4"></div>
-                        <img src="images/Profile-Website-Tiyada-1.png" alt="Portrait of Tiyada Maiwong" class="relative w-full h-full object-cover rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- The Edge Section (Unique Value Prop) -->
-        <section class="bg-background-light dark:bg-card-dark border-y border-gray-200 dark:border-gray-800">
-            <div class="px-6 md:px-10 lg:px-40 py-16 flex justify-center">
-                <div class="max-w-[960px] w-full text-center">
-                    <h2 class="text-2xl font-bold mb-8 text-text-main dark:text-white">My Competitive Edge</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="p-6 bg-white dark:bg-background-dark rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                            <span class="material-symbols-outlined text-4xl text-primary mb-4">translate</span>
-                            <h3 class="font-bold text-lg mb-2 dark:text-white">Market Translator</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Decoding complex market signals into clear product requirements that engineering teams can build.</p>
-                        </div>
-                        <div class="p-6 bg-white dark:bg-background-dark rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                            <span class="material-symbols-outlined text-4xl text-primary mb-4">paid</span>
-                            <h3 class="font-bold text-lg mb-2 dark:text-white">Commercial Strategist</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Ensuring every feature launch has a direct line to revenue growth and ROI optimization.</p>
-                        </div>
-                        <div class="p-6 bg-white dark:bg-background-dark rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                            <span class="material-symbols-outlined text-4xl text-primary mb-4">hub</span>
-                            <h3 class="font-bold text-lg mb-2 dark:text-white">Cross-Functional Glue</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Aligning sales, marketing, and product teams under a unified vision to accelerate go-to-market.</p>
+                        <div class="absolute inset-0 bg-peach/30 dark:bg-peach-dark/30 rounded-full blur-2xl transform translate-x-4 translate-y-4"></div>
+                        <div aria-label="Portrait of Tik Maiwong" class="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800 bg-gray-100 dark:bg-gray-800" role="img" style="background-image: url('images/Profile-Website-Tiyada-1.png'); background-size: cover; background-position: center;">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        -->
 
-        <!-- About Section -->
-        <section class="px-6 md:px-10 lg:px-40 py-16 flex justify-center" id="about-section">
-            <div class="max-w-[960px] w-full">
-                <div class="text-center mb-12">
-                    <h1 class="text-3xl md:text-4xl font-black text-text-main dark:text-white mb-6">About Me</h1>
+        <!-- Experience Section (Hidden) -->
+        <!--
+        <section id="experience" class="bg-white py-20 px-4 sm:px-8 lg:px-20 xl:px-40 dark:bg-[#1f1214]">
+            <div class="mx-auto w-full max-w-[1400px]">
+                <div class="mb-12 text-center lg:text-left">
+                    <h2 class="text-3xl font-black text-gray-900 sm:text-4xl dark:text-white">Professional Experience</h2>
                 </div>
-
-                <div class="flex flex-col md:flex-row gap-12 items-center">
-                    <div class="w-full md:w-1/3">
-                        <img src="images/Profile-Website-Tiyada-1.png" alt="Portrait of Tiyada Maiwong" class="aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800 object-cover">
-                    </div>
-                    <div class="w-full md:w-2/3">
-                        <h2 class="text-2xl font-bold text-text-main dark:text-white mb-4">Hello! I'm Tiyada Maiwong</h2>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                            As an Executive Product Leader, I translate market needs into scalable solutions across AdTech, Healthcare, and CPG industries. My superpower is speaking the languages of Engineering, Sales, and Finance fluently. I bridge the gap between financial rigor and commercial product success.
-                        </p>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                            With deep experience in high-compliance industries like healthcare and pet care, I specialize in building trust through education-first advertising. My approach unifies the requirements of these sectors under core pillars of regulatory compliance, trust-based marketing, and education-first strategies.
-                        </p>
-                        
-                        <div class="grid grid-cols-2 gap-4 mt-8">
+                <div class="relative border-l-2 border-peach dark:border-[#3a2024] ml-3 md:ml-4 space-y-16">
+                    <div class="relative pl-8 md:pl-12 group">
+                        <div class="absolute -left-[9px] top-1.5 h-5 w-5 rounded-full border-4 border-white dark:border-[#221013] bg-primary group-hover:scale-125 transition-transform duration-300"></div>
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
                             <div>
-                                <h3 class="font-bold text-text-main dark:text-white mb-2">Education</h3>
-                                <p class="text-gray-600 dark:text-gray-400">Business & Technology Studies</p>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm">University, 20XX-20XX</p>
+                                <h3 class="text-xl md:text-2xl font-bold text-[#181112] dark:text-white">Sr. Director, Commercial Product</h3>
+                                <p class="text-primary font-bold text-sm">Global AdTech Solutions • 2020 – Present</p>
                             </div>
+                            <span class="self-start sm:self-auto text-[10px] font-bold uppercase tracking-widest bg-peach-light dark:bg-[#3a2024] text-text-muted dark:text-[#d1b0b6] px-3 py-1 rounded-full border border-peach/50 dark:border-transparent">AdTech &amp; Media</span>
+                        </div>
+                        <p class="text-text-muted dark:text-[#d1b0b6] mb-6 max-w-3xl leading-relaxed">
+                            Driving the product vision and commercial strategy for programmatic advertising suites. Oversaw the integration of AI-driven yield management tools.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex items-start gap-3 p-4 rounded-lg bg-gray-50 dark:bg-[#2f1b1e] border border-gray-100 dark:border-[#3a2024]">
+                                <span class="material-symbols-outlined text-primary">trending_up</span>
+                                <div>
+                                    <span class="block text-2xl font-black text-[#181112] dark:text-white mb-1">$45M+</span>
+                                    <p class="text-xs font-medium text-text-muted dark:text-[#d1b0b6] leading-snug">Annual revenue growth driven through new publisher monetization products.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 p-4 rounded-lg bg-gray-50 dark:bg-[#2f1b1e] border border-gray-100 dark:border-[#3a2024]">
+                                <span class="material-symbols-outlined text-primary">group</span>
+                                <div>
+                                    <span class="block text-2xl font-black text-[#181112] dark:text-white mb-1">30+ Team</span>
+                                    <p class="text-xs font-medium text-text-muted dark:text-[#d1b0b6] leading-snug">Managed cross-functional teams across product, engineering, and sales.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative pl-8 md:pl-12 group">
+                        <div class="absolute -left-[9px] top-1.5 h-5 w-5 rounded-full border-4 border-white dark:border-[#221013] bg-peach-dark group-hover:bg-primary group-hover:scale-125 transition-all duration-300"></div>
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
                             <div>
-                                <h3 class="font-bold text-text-main dark:text-white mb-2">Location</h3>
-                                <p class="text-gray-600 dark:text-gray-400">Global, Remote-Friendly</p>
+                                <h3 class="text-xl md:text-2xl font-bold text-[#181112] dark:text-white">VP of Digital Media &amp; eCommerce</h3>
+                                <p class="text-primary font-bold text-sm">Retail &amp; Lifestyle Brand • 2017 – 2020</p>
+                            </div>
+                            <span class="self-start sm:self-auto text-[10px] font-bold uppercase tracking-widest bg-peach-light dark:bg-[#3a2024] text-text-muted dark:text-[#d1b0b6] px-3 py-1 rounded-full border border-peach/50 dark:border-transparent">eCommerce</span>
+                        </div>
+                        <p class="text-text-muted dark:text-[#d1b0b6] mb-6 max-w-3xl leading-relaxed">
+                            Led digital transformation initiatives, launching a direct-to-consumer platform and optimizing performance media spend.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex items-start gap-3 p-4 rounded-lg bg-gray-50 dark:bg-[#2f1b1e] border border-gray-100 dark:border-[#3a2024]">
+                                <span class="material-symbols-outlined text-primary">shopping_cart</span>
+                                <div>
+                                    <span class="block text-2xl font-black text-[#181112] dark:text-white mb-1">200%</span>
+                                    <p class="text-xs font-medium text-text-muted dark:text-[#d1b0b6] leading-snug">Increase in online sales conversion rate via UX optimization.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 p-4 rounded-lg bg-gray-50 dark:bg-[#2f1b1e] border border-gray-100 dark:border-[#3a2024]">
+                                <span class="material-symbols-outlined text-primary">ads_click</span>
+                                <div>
+                                    <span class="block text-2xl font-black text-[#181112] dark:text-white mb-1">3.5x ROAS</span>
+                                    <p class="text-xs font-medium text-text-muted dark:text-[#d1b0b6] leading-snug">Achieved through data-driven programmatic campaign management.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="mt-16">
-                    <h2 class="text-2xl font-bold text-text-main dark:text-white mb-6">My Journey</h2>
-                    <div class="space-y-6">
-                        <div class="flex gap-6">
-                            <div class="flex flex-col items-center">
-                                <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center">
-                                    <span class="material-symbols-outlined text-sm">bar_chart</span>
-                                </div>
-                                <div class="h-full w-px bg-gray-200 dark:bg-gray-700 my-2"></div>
+                    <div class="relative pl-8 md:pl-12 group">
+                        <div class="absolute -left-[9px] top-1.5 h-5 w-5 rounded-full border-4 border-white dark:border-[#221013] bg-peach-dark group-hover:bg-primary group-hover:scale-125 transition-all duration-300"></div>
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-[#181112] dark:text-white">Strategic Advisor</h3>
+                                <p class="text-primary font-bold text-sm">Healthcare &amp; Pet Industry • 2015 – 2017</p>
                             </div>
-                            <div class="pb-6 flex-1 border-b border-gray-200 dark:border-gray-800">
-                                <h3 class="text-xl font-bold text-text-main dark:text-white">Foundation: Finance & Analytics</h3>
-                                <p class="text-primary font-medium">Analyst | 20XX - 20XX</p>
-                                <p class="text-gray-600 dark:text-gray-400 mt-2">
-                                    Started with deep analytical rigor, understanding P&L management, and using data to forecast market trends. This period instilled a "metrics-first" mindset.
-                                </p>
-                            </div>
+                            <span class="self-start sm:self-auto text-[10px] font-bold uppercase tracking-widest bg-peach-light dark:bg-[#3a2024] text-text-muted dark:text-[#d1b0b6] px-3 py-1 rounded-full border border-peach/50 dark:border-transparent">Consulting</span>
                         </div>
-                        <div class="flex gap-6">
-                            <div class="flex flex-col items-center">
-                                <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center">
-                                    <span class="material-symbols-outlined text-sm">swap_horiz</span>
+                        <p class="text-text-muted dark:text-[#d1b0b6] mb-6 max-w-3xl leading-relaxed">
+                            Consulted for multi-location clinics to digitize patient journeys and improve operational efficiency through custom software solutions.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex items-start gap-3 p-4 rounded-lg bg-gray-50 dark:bg-[#2f1b1e] border border-gray-100 dark:border-[#3a2024]">
+                                <span class="material-symbols-outlined text-primary">schedule</span>
+                                <div>
+                                    <span class="block text-2xl font-black text-[#181112] dark:text-white mb-1">-30% Wait</span>
+                                    <p class="text-xs font-medium text-text-muted dark:text-[#d1b0b6] leading-snug">Reduction in patient wait times via digital check-in flows.</p>
                                 </div>
-                                <div class="h-full w-px bg-gray-200 dark:bg-gray-700 my-2"></div>
-                            </div>
-                            <div class="pb-6 flex-1 border-b border-gray-200 dark:border-gray-800">
-                                <h3 class="text-xl font-bold text-text-main dark:text-white">The Pivot: Product Management</h3>
-                                <p class="text-primary font-medium">Product Manager | 20XX - 20XX</p>
-                                <p class="text-gray-600 dark:text-gray-400 mt-2">
-                                    Realized that influencing the P&L required building better solutions. Transitioned to Product to translate data insights into tangible features.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="flex gap-6">
-                            <div class="flex flex-col items-center">
-                                <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center">
-                                    <span class="material-symbols-outlined text-sm">medical_services</span>
-                                </div>
-                                <div class="h-full w-px bg-gray-200 dark:bg-gray-700 my-2"></div>
-                            </div>
-                            <div class="pb-6 flex-1 border-b border-gray-200 dark:border-gray-800">
-                                <h3 class="text-xl font-bold text-text-main dark:text-white">Growth & Scale: Healthcare & FMCG</h3>
-                                <p class="text-primary font-medium">Senior Product Leader | 20XX - 20XX</p>
-                                <p class="text-gray-600 dark:text-gray-400 mt-2">
-                                    Scaled commercial products in regulated industries. Focused on user trust, compliance, and mass-market adoption strategies.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="flex gap-6">
-                            <div class="flex flex-col items-center">
-                                <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center">
-                                    <span class="material-symbols-outlined text-sm">rocket_launch</span>
-                                </div>
-                            </div>
-                            <div class="pb-6 flex-1">
-                                <h3 class="text-xl font-bold text-text-main dark:text-white">Current Focus: Executive Strategy in AdTech</h3>
-                                <p class="text-primary font-medium">VP Product & Commercial | 20XX - Present</p>
-                                <p class="text-gray-600 dark:text-gray-400 mt-2">
-                                    Driving revenue and product vision. Leveraging AI and machine learning to optimize media solutions and deliver commercial excellence.
-                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        -->
 
-        <!-- Industry Focus: Healthcare & Pet -->
-        <section class="px-6 md:px-10 lg:px-40 py-16 bg-white dark:bg-background-dark border-b border-gray-100 dark:border-gray-800" id="industry-focus">
-            <div class="max-w-[960px] w-full">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-black text-text-main dark:text-white mb-4">Industry Focus: Healthcare & Pet</h2>
-                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Building trust in high-stakes industries with education-first advertising.</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- Card 1 -->
-                    <div class="flex flex-col gap-4 rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#1e1e1e] p-6 shadow-sm hover:shadow-md transition-shadow">
-                        <div class="size-12 rounded-full bg-secondary flex items-center justify-center text-primary">
-                            <span class="material-symbols-outlined">policy</span>
+        <!-- Skills Section (Hidden) -->
+        <!--
+        <section id="skills" class="py-12 md:py-20 bg-surface-light dark:bg-surface-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
+                    <div class="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hover:border-secondary flex flex-col h-full">
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="p-3 bg-secondary/30 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <span class="material-symbols-outlined text-3xl">business_center</span>
+                            </div>
                         </div>
-                        <div class="flex flex-col gap-2">
-                            <h3 class="text-lg font-bold leading-tight text-text-main dark:text-white">Regulatory Compliance</h3>
-                            <p class="text-[#896168] dark:text-gray-400 text-sm leading-relaxed">
-                                Deep expertise in navigating HIPAA, GDPR, and industry-specific advertising constraints without stifling innovation.
-                            </p>
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-2 group-hover:text-primary transition-colors">Commercial Product Leadership</h3>
+                        <div class="w-12 h-1 bg-gray-100 group-hover:bg-primary rounded-full transition-colors mb-6"></div>
+                        <div class="flex flex-col gap-3 mt-auto">
+                            <div class="w-full bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 border border-gray-100 dark:border-gray-700 group-hover:border-secondary/50 transition-colors">
+                                <span class="block text-sm font-bold text-gray-800 dark:text-gray-200">Strategy Development</span>
+                            </div>
+                            <div class="w-full bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 border border-gray-100 dark:border-gray-700 group-hover:border-secondary/50 transition-colors">
+                                <span class="block text-sm font-bold text-gray-800 dark:text-gray-200">P&amp;L Ownership</span>
+                            </div>
+                            <div class="w-full bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 border border-gray-100 dark:border-gray-700 group-hover:border-secondary/50 transition-colors">
+                                <span class="block text-sm font-bold text-gray-800 dark:text-gray-200">Portfolio Management</span>
+                            </div>
+                            <div class="w-full bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 border border-gray-100 dark:border-gray-700 group-hover:border-secondary/50 transition-colors">
+                                <span class="block text-sm font-bold text-gray-800 dark:text-gray-200">GTM Strategy &amp; Monetization</span>
+                            </div>
                         </div>
                     </div>
-                    <!-- Card 2 -->
-                    <div class="flex flex-col gap-4 rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#1e1e1e] p-6 shadow-sm hover:shadow-md transition-shadow">
-                        <div class="size-12 rounded-full bg-secondary flex items-center justify-center text-primary">
-                            <span class="material-symbols-outlined">verified_user</span>
+                    <div class="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hover:border-secondary flex flex-col h-full">
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="p-3 bg-secondary/30 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <span class="material-symbols-outlined text-3xl">ads_click</span>
+                            </div>
                         </div>
-                        <div class="flex flex-col gap-2">
-                            <h3 class="text-lg font-bold leading-tight text-text-main dark:text-white">Trust-Based Marketing</h3>
-                            <p class="text-[#896168] dark:text-gray-400 text-sm leading-relaxed">
-                                Building long-term loyalty through transparent communication, essential for products affecting health and loved ones.
-                            </p>
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-2 group-hover:text-primary transition-colors">Ad Tech &amp; Digital Media</h3>
+                        <div class="w-12 h-1 bg-gray-100 group-hover:bg-primary rounded-full transition-colors mb-6"></div>
+                        <div class="flex flex-col gap-3 mt-auto">
+                            <div class="w-full bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 border border-gray-100 dark:border-gray-700 group-hover:border-secondary/50 transition-colors">
+                                <span class="block text-sm font-bold text-gray-800 dark:text-gray-200">Native Ad Network / Digital Pub.</span>
+                            </div>
+                            <div class="w-full bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 border border-gray-100 dark:border-gray-700 group-hover:border-secondary/50 transition-colors">
+                                <span class="block text-sm font-bold text-gray-800 dark:text-gray-200">Performance Measurement KPIs</span>
+                            </div>
+                            <div class="w-full bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 border border-gray-100 dark:border-gray-700 group-hover:border-secondary/50 transition-colors">
+                                <span class="block text-sm font-bold text-gray-800 dark:text-gray-200">Agency / Manufacturer Ecosystem</span>
+                            </div>
+                            <div class="w-full bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 border border-gray-100 dark:border-gray-700 group-hover:border-secondary/50 transition-colors">
+                                <span class="block text-sm font-bold text-gray-800 dark:text-gray-200">Audience + Data Strategy</span>
+                            </div>
                         </div>
                     </div>
-                    <!-- Card 3 -->
-                    <div class="flex flex-col gap-4 rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#1e1e1e] p-6 shadow-sm hover:shadow-md transition-shadow">
-                        <div class="size-12 rounded-full bg-secondary flex items-center justify-center text-primary">
-                            <span class="material-symbols-outlined">lightbulb</span>
+                    <div class="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hover:border-secondary flex flex-col h-full">
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="p-3 bg-secondary/30 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <span class="material-symbols-outlined text-3xl">diversity_3</span>
+                            </div>
                         </div>
-                        <div class="flex flex-col gap-2">
-                            <h3 class="text-lg font-bold leading-tight text-text-main dark:text-white">Education-First</h3>
-                            <p class="text-[#896168] dark:text-gray-400 text-sm leading-relaxed">
-                                Empowering users with knowledge to drive decision making, turning complex medical/vet data into accessible insights.
-                            </p>
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-2 group-hover:text-primary transition-colors">Team &amp; Stakeholder Leadership</h3>
+                        <div class="w-12 h-1 bg-gray-100 group-hover:bg-primary rounded-full transition-colors mb-6"></div>
+                        <div class="flex flex-col gap-3 mt-auto">
+                            <div class="w-full bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 border border-gray-100 dark:border-gray-700 group-hover:border-secondary/50 transition-colors">
+                                <span class="block text-sm font-bold text-gray-800 dark:text-gray-200">Cross-functional Alignment</span>
+                            </div>
+                            <div class="w-full bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 border border-gray-100 dark:border-gray-700 group-hover:border-secondary/50 transition-colors">
+                                <span class="block text-sm font-bold text-gray-800 dark:text-gray-200">Leading Product Managers</span>
+                            </div>
+                            <div class="w-full bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 border border-gray-100 dark:border-gray-700 group-hover:border-secondary/50 transition-colors">
+                                <span class="block text-sm font-bold text-gray-800 dark:text-gray-200">Collab. Sales, Marketing, Tech</span>
+                            </div>
+                            <div class="w-full bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 border border-gray-100 dark:border-gray-700 group-hover:border-secondary/50 transition-colors">
+                                <span class="block text-sm font-bold text-gray-800 dark:text-gray-200">Executive Communication</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Sector Expertise -->
-                <div class="mt-16">
-                    <div class="border-b border-gray-100 dark:border-gray-800 pb-4 mb-8">
-                        <h2 class="text-2xl font-bold text-text-main dark:text-white mb-2">Sector Expertise</h2>
-                        <p class="text-gray-500 text-sm">Detailed breakdown of specialized experience in both domains.</p>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        <!-- Healthcare Column -->
-                        <div class="flex flex-col gap-8">
-                            <div class="flex items-center gap-4">
-                                <div class="p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
-                                    <span class="material-symbols-outlined text-primary text-4xl">medical_services</span>
-                                </div>
-                                <h3 class="text-2xl font-bold text-text-main dark:text-white">Healthcare & Pharma</h3>
-                            </div>
-                            <div class="flex flex-col gap-0 border-t border-gray-100 dark:border-gray-800">
-                                <!-- Item 1 -->
-                                <div class="py-6 border-b border-gray-100 dark:border-gray-800 grid grid-cols-[1fr_2fr] gap-4">
-                                    <p class="text-[#896168] dark:text-gray-400 text-sm font-bold uppercase tracking-wider">Focus Area</p>
-                                    <div class="flex flex-col gap-1">
-                                        <p class="text-text-main dark:text-white font-bold">Pharma & OTC Brands</p>
-                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Launching digital products for regulated medication. Managing "black box" warning constraints in digital ad inventory.</p>
-                                    </div>
-                                </div>
-                                <!-- Item 2 -->
-                                <div class="py-6 border-b border-gray-100 dark:border-gray-800 grid grid-cols-[1fr_2fr] gap-4">
-                                    <p class="text-[#896168] dark:text-gray-400 text-sm font-bold uppercase tracking-wider">Audience</p>
-                                    <div class="flex flex-col gap-1">
-                                        <p class="text-text-main dark:text-white font-bold">HCP Targeting</p>
-                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Precision tools for engaging doctors and specialists based on NPI numbers and prescription behavior patterns.</p>
-                                    </div>
-                                </div>
-                                <!-- Item 3 -->
-                                <div class="py-6 border-b border-gray-100 dark:border-gray-800 grid grid-cols-[1fr_2fr] gap-4">
-                                    <p class="text-[#896168] dark:text-gray-400 text-sm font-bold uppercase tracking-wider">Compliance</p>
-                                    <div class="flex flex-col gap-1">
-                                        <p class="text-text-main dark:text-white font-bold">HIPAA & Privacy Architecture</p>
-                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Designed data clean rooms to allow effective targeting without compromising patient PII.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-background-light dark:bg-[#1e1e1e] p-6 rounded-lg">
-                                <p class="text-sm italic text-gray-600 dark:text-gray-300">
-                                    <span class="font-bold text-primary block mb-2">Key Win:</span>
-                                    "Redesigned the programmatic ad-buying interface for a major pharma client, reducing compliance approval time by 60% through automated rule-checking."
-                                </p>
+                    <div class="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hover:border-secondary flex flex-col h-full">
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="p-3 bg-secondary/30 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <span class="material-symbols-outlined text-3xl">rocket_launch</span>
                             </div>
                         </div>
-                        <!-- Pet Care Column -->
-                        <div class="flex flex-col gap-8">
-                            <div class="flex items-center gap-4">
-                                <div class="p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
-                                    <span class="material-symbols-outlined text-primary text-4xl">pets</span>
-                                </div>
-                                <h3 class="text-2xl font-bold text-text-main dark:text-white">Pet Care Ecosystems</h3>
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-2 group-hover:text-primary transition-colors">Product Dev &amp; Operations</h3>
+                        <div class="w-12 h-1 bg-gray-100 group-hover:bg-primary rounded-full transition-colors mb-6"></div>
+                        <div class="flex flex-col gap-3 mt-auto">
+                            <div class="w-full bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 border border-gray-100 dark:border-gray-700 group-hover:border-secondary/50 transition-colors">
+                                <span class="block text-sm font-bold text-gray-800 dark:text-gray-200">End-to-End Lifecycle</span>
                             </div>
-                            <div class="flex flex-col gap-0 border-t border-gray-100 dark:border-gray-800">
-                                <!-- Item 1 -->
-                                <div class="py-6 border-b border-gray-100 dark:border-gray-800 grid grid-cols-[1fr_2fr] gap-4">
-                                    <p class="text-[#896168] dark:text-gray-400 text-sm font-bold uppercase tracking-wider">Strategy</p>
-                                    <div class="flex flex-col gap-1">
-                                        <p class="text-text-main dark:text-white font-bold">The "Pet Parent" Persona</p>
-                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Translating human health trends (clean label, preventative care) into pet product marketing strategies.</p>
-                                    </div>
-                                </div>
-                                <!-- Item 2 -->
-                                <div class="py-6 border-b border-gray-100 dark:border-gray-800 grid grid-cols-[1fr_2fr] gap-4">
-                                    <p class="text-[#896168] dark:text-gray-400 text-sm font-bold uppercase tracking-wider">Integration</p>
-                                    <div class="flex flex-col gap-1">
-                                        <p class="text-text-main dark:text-white font-bold">Vet & Clinic Connectivity</p>
-                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Bridging the gap between veterinary recommendations and point-of-sale for therapeutic diets and meds.</p>
-                                    </div>
-                                </div>
-                                <!-- Item 3 -->
-                                <div class="py-6 border-b border-gray-100 dark:border-gray-800 grid grid-cols-[1fr_2fr] gap-4">
-                                    <p class="text-[#896168] dark:text-gray-400 text-sm font-bold uppercase tracking-wider">Product</p>
-                                    <div class="flex flex-col gap-1">
-                                        <p class="text-text-main dark:text-white font-bold">Pet Insurance & Wellness</p>
-                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Developing subscription models that bundle insurance with routine care products.</p>
-                                    </div>
-                                </div>
+                            <div class="w-full bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 border border-gray-100 dark:border-gray-700 group-hover:border-secondary/50 transition-colors">
+                                <span class="block text-sm font-bold text-gray-800 dark:text-gray-200">Rapid Prototyping</span>
                             </div>
-                            <div class="bg-background-light dark:bg-[#1e1e1e] p-6 rounded-lg">
-                                <p class="text-sm italic text-gray-600 dark:text-gray-300">
-                                    <span class="font-bold text-primary block mb-2">Key Win:</span>
-                                    "Launched a 'Pet Wellness Score' app feature that increased user retention by 25% by gamifying preventative health steps."
-                                </p>
+                            <div class="w-full bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 border border-gray-100 dark:border-gray-700 group-hover:border-secondary/50 transition-colors">
+                                <span class="block text-sm font-bold text-gray-800 dark:text-gray-200">Data-Informed Decisions</span>
+                            </div>
+                            <div class="w-full bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 border border-gray-100 dark:border-gray-700 group-hover:border-secondary/50 transition-colors">
+                                <span class="block text-sm font-bold text-gray-800 dark:text-gray-200">Client Feedback Integration</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        -->
 
-        <!-- Career Journey Timeline -->
-        <section class="px-6 md:px-10 lg:px-40 py-16 md:py-24 flex justify-center bg-white dark:bg-background-dark" id="journey">
-            <div class="max-w-[960px] w-full">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-black text-text-main dark:text-white mb-4">My Career Journey</h2>
-                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">From analyzing the numbers to shaping the products that drive them.</p>
-                </div>
-                <div class="grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-x-4 md:gap-x-8 px-4 relative">
-                    <!-- Line connector -->
-                    <div class="absolute left-[34px] md:left-[44px] top-4 bottom-0 w-[2px] bg-gradient-to-b from-primary via-secondary to-gray-200 dark:to-gray-800"></div>
-                    <!-- Item 1 -->
-                    <div class="flex flex-col items-center gap-1 pt-2 z-10 relative">
-                        <div class="w-10 h-10 rounded-full bg-white dark:bg-card-dark border-2 border-primary flex items-center justify-center text-primary shadow-sm">
-                            <span class="material-symbols-outlined text-xl">bar_chart</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col pb-12">
-                        <span class="text-sm font-bold text-primary mb-1">The Foundation</span>
-                        <h3 class="text-xl font-bold text-text-main dark:text-white">Finance & Analytics</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mt-2">Started with deep analytical rigor, understanding P&L management, and using data to forecast market trends. This period instilled a "metrics-first" mindset.</p>
-                    </div>
-                    <!-- Item 2 -->
-                    <div class="flex flex-col items-center gap-1 pt-2 z-10 relative">
-                        <div class="w-10 h-10 rounded-full bg-white dark:bg-card-dark border-2 border-secondary flex items-center justify-center text-secondary shadow-sm">
-                            <span class="material-symbols-outlined text-xl">swap_horiz</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col pb-12">
-                        <span class="text-sm font-bold text-secondary mb-1">The Pivot</span>
-                        <h3 class="text-xl font-bold text-text-main dark:text-white">Pivot to Product Management</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mt-2">Realized that influencing the P&L required building better solutions. Transitioned to Product to translate data insights into tangible features.</p>
-                    </div>
-                    <!-- Item 3 -->
-                    <div class="flex flex-col items-center gap-1 pt-2 z-10 relative">
-                        <div class="w-10 h-10 rounded-full bg-white dark:bg-card-dark border-2 border-secondary flex items-center justify-center text-secondary shadow-sm">
-                            <span class="material-symbols-outlined text-xl">medical_services</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col pb-12">
-                        <span class="text-sm font-bold text-secondary mb-1">Growth & Scale</span>
-                        <h3 class="text-xl font-bold text-text-main dark:text-white">Leadership in FMCG & Healthcare</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mt-2">Scaled commercial products in regulated industries. Focused on user trust, compliance, and mass-market adoption strategies.</p>
-                    </div>
-                    <!-- Item 4 -->
-                    <div class="flex flex-col items-center gap-1 pt-2 z-10 relative">
-                        <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-md shadow-primary/40">
-                            <span class="material-symbols-outlined text-xl">rocket_launch</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col pb-4">
-                        <span class="text-sm font-bold text-primary mb-1">Current Focus</span>
-                        <h3 class="text-xl font-bold text-text-main dark:text-white">Executive Strategy in AdTech</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mt-2">Driving revenue and product vision. Leveraging AI and machine learning to optimize media solutions and deliver commercial excellence.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Leadership Philosophy -->
-        <section class="px-6 md:px-10 lg:px-40 py-16 bg-background-light dark:bg-card-dark transition-colors" id="leadership">
-            <div class="flex flex-col md:flex-row max-w-[960px] mx-auto gap-10 md:gap-16">
-                <div class="md:w-1/3 flex flex-col gap-4">
-                    <h2 class="text-3xl font-black text-text-main dark:text-white leading-tight">
-                        Leadership Philosophy
+        <!-- Portfolio Section (Hidden) -->
+        <!--
+        <section id="portfolio" class="px-6 md:px-10 lg:px-40 py-16">
+            <div class="flex flex-col gap-8 mb-16 text-center lg:text-left">
+                <div class="flex flex-col gap-2">
+                    <span class="text-primary font-bold tracking-widest uppercase text-xs">Executive Portfolio</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em] text-[#181112] dark:text-white mb-2">
+                        Commercial &amp; Digital Product<br class="hidden lg:block"/> Leadership Across Industries.
+                    </h1>
+                    <h2 class="text-xl md:text-2xl font-medium text-text-muted dark:text-[#d1b0b6] leading-relaxed max-w-4xl">
+                        A Collection of Work Shaped by Strategy, Creativity &amp; Impact.
                     </h2>
-                    <p class="text-lg text-gray-700 dark:text-gray-300">
-                        How I drive results and empower teams to do their best work.
-                    </p>
-                    <div class="w-16 h-1 bg-primary rounded-full mt-2"></div>
-                </div>
-                <div class="md:w-2/3 grid grid-cols-1 gap-6">
-                    <div class="flex gap-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark p-6 shadow-sm">
-                        <div class="shrink-0 text-primary mt-1">
-                            <span class="material-symbols-outlined text-3xl">analytics</span>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <h3 class="text-lg font-bold text-text-main dark:text-white">Data-Driven Decisions</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Leveraging analytics to validate hypotheses and minimize risk. I believe in "strong opinions, loosely held" until data proves otherwise.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark p-6 shadow-sm">
-                        <div class="shrink-0 text-primary mt-1">
-                            <span class="material-symbols-outlined text-3xl">favorite</span>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <h3 class="text-lg font-bold text-text-main dark:text-white">Customer-Centric Vision</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Keeping the user at the heart of every product iteration. If it doesn't solve a real user problem, it doesn't belong on the roadmap.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark p-6 shadow-sm">
-                        <div class="shrink-0 text-primary mt-1">
-                            <span class="material-symbols-outlined text-3xl">groups</span>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <h3 class="text-lg font-bold text-text-main dark:text-white">Cross-Functional Empowerment</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Building bridges, not silos. I foster a culture where Engineering, Sales, and Product challenge each other respectfully to build better.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Management Philosophy -->
-        <section class="px-6 md:px-10 lg:px-40 py-16 bg-white dark:bg-background-dark" id="management">
-            <div class="max-w-[960px] w-full">
-                <div class="mb-12 text-center">
-                    <span class="text-primary font-bold tracking-wider uppercase text-sm block mb-2">Management Philosophy</span>
-                    <h2 class="text-3xl font-bold text-text-main dark:text-white max-w-2xl mx-auto">Building & Mentoring High-Performing Teams</h2>
-                    <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                        My approach to leadership is rooted in empathy, accountability, and continuous growth. I empower teams to own their outcomes while providing the strategic air cover they need to succeed.
-                    </p>
+            <div class="mb-12 overflow-x-auto pb-4">
+                <div class="flex gap-4 min-w-max">
+                    <button class="px-5 py-2 bg-primary text-white rounded-full text-sm font-bold shadow-md hover:bg-red-700 transition-colors">All Work</button>
+                    <button class="px-5 py-2 bg-peach-light dark:bg-[#3a2024] text-text-muted dark:text-[#d1b0b6] rounded-full text-sm font-medium hover:bg-primary/10 transition-colors border border-transparent hover:border-primary/20">Digital Transformation</button>
+                    <button class="px-5 py-2 bg-peach-light dark:bg-[#3a2024] text-text-muted dark:text-[#d1b0b6] rounded-full text-sm font-medium hover:bg-primary/10 transition-colors border border-transparent hover:border-primary/20">Media Platforms</button>
+                    <button class="px-5 py-2 bg-peach-light dark:bg-[#3a2024] text-text-muted dark:text-[#d1b0b6] rounded-full text-sm font-medium hover:bg-primary/10 transition-colors border border-transparent hover:border-primary/20">Product Launch</button>
+                    <button class="px-5 py-2 bg-peach-light dark:bg-[#3a2024] text-text-muted dark:text-[#d1b0b6] rounded-full text-sm font-medium hover:bg-primary/10 transition-colors border border-transparent hover:border-primary/20">Healthcare &amp; Pet</button>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- Card 1 -->
-                    <div class="bg-card-light dark:bg-white/5 p-8 rounded-xl border border-gray-100 dark:border-white/10 shadow-sm hover:shadow-md transition-shadow">
-                        <div class="size-12 bg-secondary/50 dark:bg-primary/20 rounded-lg flex items-center justify-center mb-6 text-primary">
-                            <span class="material-symbols-outlined text-[32px]">volunteer_activism</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group cursor-pointer bg-white dark:bg-[#2f1b1e] rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-[#3a2024] card-hover transition-all duration-300">
+                    <div class="aspect-video bg-gray-200 dark:bg-[#3a2024] relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                        <img alt="Digital advertising transformation project" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="images/Profile-Website-Tiyada-1.png"/>
+                        <div class="absolute bottom-4 left-4 z-20">
+                            <span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider rounded-md mb-1">Shoppertainment and Social Commerce</span>
                         </div>
-                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-3">Empathetic Leadership</h3>
-                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                            Fostering a psychological safety net where creativity thrives. I believe that people perform their best when they feel valued, heard, and understood.
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#181112] dark:text-white mb-2 group-hover:text-primary transition-colors">Digital Advertising Transformation</h3>
+                        <p class="text-sm text-text-muted dark:text-[#d1b0b6] line-clamp-2 mb-4">
+                            Leading strategic overhauls for major ad-tech stacks, optimizing for programmatic efficiency and yield management.
                         </p>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="bg-card-light dark:bg-white/5 p-8 rounded-xl border border-gray-100 dark:border-white/10 shadow-sm hover:shadow-md transition-shadow">
-                        <div class="size-12 bg-secondary/50 dark:bg-primary/20 rounded-lg flex items-center justify-center mb-6 text-primary">
-                            <span class="material-symbols-outlined text-[32px]">compass_calibration</span>
+                        <div class="flex items-center text-primary text-sm font-bold gap-1 group-hover:gap-2 transition-all">
+                            View Case Study <span class="material-symbols-outlined text-lg">arrow_forward</span>
                         </div>
-                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-3">Strategic Alignment</h3>
-                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                            Ensuring every individual contributor understands how their daily work impacts broader business goals. Connecting the dots from code to revenue.
+                    </div>
+                </div>
+                <div class="group cursor-pointer bg-white dark:bg-[#2f1b1e] rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-[#3a2024] card-hover transition-all duration-300">
+                    <div class="aspect-video bg-gray-200 dark:bg-[#3a2024] relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                        <img alt="Performance media project" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="images/Profile-Website-Tiyada-1.png"/>
+                        <div class="absolute bottom-4 left-4 z-20">
+                            <span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider rounded-md mb-1">Media</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#181112] dark:text-white mb-2 group-hover:text-primary transition-colors">Performance Media &amp; Campaign Platforms</h3>
+                        <p class="text-sm text-text-muted dark:text-[#d1b0b6] line-clamp-2 mb-4">
+                            Designing and scaling unified campaign management dashboards that drive real-time ROAS optimization.
                         </p>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="bg-card-light dark:bg-white/5 p-8 rounded-xl border border-gray-100 dark:border-white/10 shadow-sm hover:shadow-md transition-shadow">
-                        <div class="size-12 bg-secondary/50 dark:bg-primary/20 rounded-lg flex items-center justify-center mb-6 text-primary">
-                            <span class="material-symbols-outlined text-[32px]">trending_up</span>
+                        <div class="flex items-center text-primary text-sm font-bold gap-1 group-hover:gap-2 transition-all">
+                            View Case Study <span class="material-symbols-outlined text-lg">arrow_forward</span>
                         </div>
-                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-3">Results-Driven Culture</h3>
-                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                            Setting clear KPIs and OKRs while maintaining accountability without micromanagement. We celebrate wins and learn rapidly from failures.
+                    </div>
+                </div>
+                <div class="group cursor-pointer bg-white dark:bg-[#2f1b1e] rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-[#3a2024] card-hover transition-all duration-300">
+                    <div class="aspect-video bg-gray-200 dark:bg-[#3a2024] relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                        <img alt="Pet & Healthcare project" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="images/Profile-Website-Tiyada-1.png"/>
+                        <div class="absolute bottom-4 left-4 z-20">
+                            <span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider rounded-md mb-1">Health & Pet</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#181112] dark:text-white mb-2 group-hover:text-primary transition-colors">Pet Products & Healthcare Digital Solutions</h3>
+                        <p class="text-sm text-text-muted dark:text-[#d1b0b6] line-clamp-2 mb-4">
+                            Bridging the gap between veterinary care and digital consumer products through integrated app ecosystems.
                         </p>
-                    </div>
-                </div>
-
-                <!-- Cross-Functional Impact -->
-                <div class="mt-16">
-                    <div class="text-center max-w-3xl mx-auto mb-16">
-                        <span class="text-primary font-bold tracking-wider uppercase text-sm block mb-2">The Hub</span>
-                        <h2 class="text-3xl font-bold text-text-main dark:text-white mb-4">Cross-Functional Impact</h2>
-                        <p class="text-gray-600 dark:text-gray-400">
-                            I sit at the intersection of critical business functions, translating technical constraints into commercial opportunities and marketing narratives.
-                        </p>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <!-- Visual Diagram Representation -->
-                        <div class="relative min-h-[400px] flex items-center justify-center p-8 bg-gray-50 dark:bg-white/5 rounded-2xl border border-gray-100 dark:border-white/10">
-                            <!-- Connecting Lines -->
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="w-3/4 h-px bg-gray-300 dark:bg-gray-600"></div>
-                                <div class="absolute w-px h-3/4 bg-gray-300 dark:bg-gray-600"></div>
-                            </div>
-                            <!-- Center Node -->
-                            <div class="relative z-10 size-32 bg-primary text-white rounded-full flex flex-col items-center justify-center text-center shadow-xl p-4 border-4 border-white dark:border-gray-800">
-                                <span class="font-black text-lg leading-tight">PRODUCT<br/>&<br/>COMMERCIAL</span>
-                            </div>
-                            <!-- Outer Nodes -->
-                            <div class="absolute top-8 bg-white dark:bg-gray-800 p-3 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 flex items-center gap-2 max-w-[180px]">
-                                <span class="material-symbols-outlined text-primary">shield_person</span>
-                                <span class="text-xs font-bold">Executive<br/>Stakeholders</span>
-                            </div>
-                            <div class="absolute bottom-8 bg-white dark:bg-gray-800 p-3 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 flex items-center gap-2 max-w-[180px]">
-                                <span class="material-symbols-outlined text-primary">groups</span>
-                                <span class="text-xs font-bold">Internal<br/>Teams</span>
-                            </div>
-                            <div class="absolute left-4 bg-white dark:bg-gray-800 p-3 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 flex items-center gap-2 max-w-[180px]">
-                                <span class="material-symbols-outlined text-primary">memory</span>
-                                <span class="text-xs font-bold">Technology<br/>& Eng</span>
-                            </div>
-                            <div class="absolute right-4 bg-white dark:bg-gray-800 p-3 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 flex items-center gap-2 max-w-[180px]">
-                                <span class="material-symbols-outlined text-primary">handshake</span>
-                                <span class="text-xs font-bold">Clients &<br/>Agencies</span>
-                            </div>
-                        </div>
-                        <!-- Details List -->
-                        <div class="flex flex-col gap-6">
-                            <div class="group flex gap-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
-                                <div class="mt-1">
-                                    <span class="material-symbols-outlined text-primary text-[28px]">shield_person</span>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold text-text-main dark:text-white">Partnering with Executives</h3>
-                                    <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                        Translating complex product roadmaps into clear business value for C-suite reporting. Securing buy-in for long-term strategic initiatives.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="group flex gap-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
-                                <div class="mt-1">
-                                    <span class="material-symbols-outlined text-primary text-[28px]">handshake</span>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold text-text-main dark:text-white">Client & Agency Relations</h3>
-                                    <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                        Acting as the senior voice in the room for critical client negotiations. Bridging the gap between client needs and product capabilities.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="group flex gap-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
-                                <div class="mt-1">
-                                    <span class="material-symbols-outlined text-primary text-[28px]">hub</span>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold text-text-main dark:text-white">Internal Stakeholder Alignment</h3>
-                                    <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                        Unifying Sales, Marketing, and Engineering around a shared vision. Breaking down silos to accelerate go-to-market strategies.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Overview -->
-        <section class="px-6 md:px-10 lg:px-40 py-16 flex justify-center" id="skills">
-            <div class="max-w-[960px] w-full">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-text-main dark:text-white mb-4">Core Competencies</h2>
-                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Key areas where I drive commercial success and product innovation.</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Card 1: Commercial Product Management -->
-                    <div class="group bg-card-light dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all hover:border-secondary">
-                        <div class="flex items-start justify-between mb-4">
-                            <div class="p-3 bg-secondary/30 rounded-lg text-primary">
-                                <span class="material-symbols-outlined text-3xl">inventory_2</span>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4 group-hover:text-primary transition-colors">Commercial Product Management</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">End-to-end product lifecycle oversight from ideation to market dominance.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Product Lifecycle Management</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Roadmap Strategy</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Go-to-Market Execution</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Agile Methodology</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Innovation Strategy</span>
-                        </div>
-                    </div>
-
-                    <!-- Card 2: Digital Advertising & Media -->
-                    <div class="group bg-card-light dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all hover:border-secondary">
-                        <div class="flex items-start justify-between mb-4">
-                            <div class="p-3 bg-secondary/30 rounded-lg text-primary">
-                                <span class="material-symbols-outlined text-3xl">campaign</span>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4 group-hover:text-primary transition-colors">Digital Advertising & Media</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Deep expertise in programmatic ecosystems and media monetization.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Programmatic Advertising</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Retail Media Networks</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Publisher Solutions</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Media Buying</span>
-                        </div>
-                    </div>
-
-                    <!-- Card 3: Performance Marketing & KPIs -->
-                    <div class="group bg-card-light dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all hover:border-secondary">
-                        <div class="flex items-start justify-between mb-4">
-                            <div class="p-3 bg-secondary/30 rounded-lg text-primary">
-                                <span class="material-symbols-outlined text-3xl">trending_up</span>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4 group-hover:text-primary transition-colors">Performance Marketing & KPIs</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Data-driven optimization focusing on ROI, conversion, and growth.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">ROI Analysis</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Conversion Optimization</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Data Analytics</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">KPI Definition</span>
-                        </div>
-                    </div>
-
-                    <!-- Card 4: Healthcare & Pet Industries -->
-                    <div class="group bg-card-light dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all hover:border-secondary">
-                        <div class="flex items-start justify-between mb-4">
-                            <div class="p-3 bg-secondary/30 rounded-lg text-primary">
-                                <span class="material-symbols-outlined text-3xl">pets</span>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4 group-hover:text-primary transition-colors">Healthcare & Pet Industries</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Specialized domain knowledge in high-compliance and niche markets.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Regulatory Compliance</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Market Trends</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Telehealth Solutions</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Pet Tech</span>
-                        </div>
-                    </div>
-
-                    <!-- Card 5: Strategic Planning & P&L -->
-                    <div class="group bg-card-light dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all hover:border-secondary">
-                        <div class="flex items-start justify-between mb-4">
-                            <div class="p-3 bg-secondary/30 rounded-lg text-primary">
-                                <span class="material-symbols-outlined text-3xl">strategy</span>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4 group-hover:text-primary transition-colors">Strategic Planning & P&L</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Business modeling and financial stewardship for sustainable growth.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Revenue Forecasting</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Budget Management</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Business Modeling</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">P&L Ownership</span>
-                        </div>
-                    </div>
-
-                    <!-- Card 6: Leadership & Stakeholders -->
-                    <div class="group bg-card-light dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all hover:border-secondary">
-                        <div class="flex items-start justify-between mb-4">
-                            <div class="p-3 bg-secondary/30 rounded-lg text-primary">
-                                <span class="material-symbols-outlined text-3xl">groups</span>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-4 group-hover:text-primary transition-colors">Leadership & Stakeholders</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Leading cross-functional teams and managing executive expectations.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Cross-functional Collaboration</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Mentorship</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Executive Presentations</span>
-                            <span class="inline-flex items-center px-3 py-1 rounded bg-gray-50 dark:bg-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-600">Team Building</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tech Stack & Tools Section -->
-        <section class="px-6 md:px-10 lg:px-40 py-16 flex justify-center bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800">
-            <div class="max-w-[960px] w-full">
-                <div class="mb-10 text-center">
-                    <h3 class="text-2xl font-bold text-text-main dark:text-white mb-3">Ad Tech & Platform Proficiency</h3>
-                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Hands-on experience with industry-standard tools and platforms utilized to drive commercial success.</p>
-                </div>
-                <div class="flex flex-wrap justify-center gap-4 md:gap-6">
-                    <!-- Tool Badge -->
-                    <div class="flex items-center gap-3 px-5 py-3 rounded-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
-                        <span class="material-symbols-outlined text-primary text-[20px]">ads_click</span>
-                        <span class="font-semibold text-text-main dark:text-white">Google Ad Manager</span>
-                    </div>
-                    <!-- Tool Badge -->
-                    <div class="flex items-center gap-3 px-5 py-3 rounded-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
-                        <span class="material-symbols-outlined text-primary text-[20px]">analytics</span>
-                        <span class="font-semibold text-text-main dark:text-white">Google Analytics 4</span>
-                    </div>
-                    <!-- Tool Badge -->
-                    <div class="flex items-center gap-3 px-5 py-3 rounded-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
-                        <span class="material-symbols-outlined text-primary text-[20px]">hub</span>
-                        <span class="font-semibold text-text-main dark:text-white">DSP / SSP Platforms</span>
-                    </div>
-                    <!-- Tool Badge -->
-                    <div class="flex items-center gap-3 px-5 py-3 rounded-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
-                        <span class="material-symbols-outlined text-primary text-[20px]">table_chart</span>
-                        <span class="font-semibold text-text-main dark:text-white">Tableau</span>
-                    </div>
-                    <!-- Tool Badge -->
-                    <div class="flex items-center gap-3 px-5 py-3 rounded-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
-                        <span class="material-symbols-outlined text-primary text-[20px]">cloud_sync</span>
-                        <span class="font-semibold text-text-main dark:text-white">Salesforce</span>
-                    </div>
-                    <!-- Tool Badge -->
-                    <div class="flex items-center gap-3 px-5 py-3 rounded-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
-                        <span class="material-symbols-outlined text-primary text-[20px]">view_kanban</span>
-                        <span class="font-semibold text-text-main dark:text-white">Jira / Confluence</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Highlight Metrics Section -->
-        <section class="py-16 bg-primary text-white">
-            <div class="max-w-[960px] mx-auto px-6 md:px-10 lg:px-40">
-                <div class="flex flex-col md:flex-row items-center justify-between gap-8 bg-white/10 p-8 md:p-12 rounded-2xl backdrop-blur-md">
-                    <div class="flex-1">
-                        <h3 class="text-3xl font-black mb-2">Proven Impact</h3>
-                        <p class="text-white/80 text-lg">Applied strategic P&L management to drive revenue growth.</p>
-                    </div>
-                    <div class="flex flex-col sm:flex-row gap-8 md:gap-12">
-                        <div class="text-center sm:text-left">
-                            <span class="block text-4xl md:text-5xl font-black tracking-tighter">200%</span>
-                            <span class="text-sm font-medium text-white/80 uppercase tracking-widest mt-1">Revenue Growth</span>
-                        </div>
-                        <div class="text-center sm:text-left">
-                            <span class="block text-4xl md:text-5xl font-black tracking-tighter">15+</span>
-                            <span class="text-sm font-medium text-white/80 uppercase tracking-widest mt-1">Products Launched</span>
-                        </div>
-                        <div class="text-center sm:text-left">
-                            <span class="block text-4xl md:text-5xl font-black tracking-tighter">$50M</span>
-                            <span class="text-sm font-medium text-white/80 uppercase tracking-widest mt-1">Budget Managed</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section class="px-6 md:px-10 lg:px-40 py-16 flex justify-center" id="projects">
-            <div class="max-w-[960px] w-full">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-black text-text-main dark:text-white mb-4">Featured Projects</h2>
-                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Showcasing my work at the intersection of commercial strategy and product innovation.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 fade-in">
-                        <div class="h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                            <span class="text-gray-500 dark:text-gray-400">Project Image</span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-text-main dark:text-white">Healthcare Ad Platform</h3>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">Designed programmatic ad-buying interface for pharma clients with automated compliance checking, reducing approval time by 60%.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary rounded-full text-xs">Product Strategy</span>
-                                <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary rounded-full text-xs">UX Design</span>
-                                <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary rounded-full text-xs">Compliance</span>
-                            </div>
-                            <a href="#" class="inline-block text-primary font-medium hover:underline">View Case Study →</a>
-                        </div>
-                    </div>
-
-                    <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 fade-in">
-                        <div class="h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                            <span class="text-gray-500 dark:text-gray-400">Project Image</span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-text-main dark:text-white">Pet Wellness App</h3>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">Launched 'Pet Wellness Score' feature increasing user retention by 25% through gamified preventative health steps.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-secondary/10 dark:bg-secondary/20 text-secondary dark:text-secondary rounded-full text-xs">Product Management</span>
-                                <span class="px-3 py-1 bg-secondary/10 dark:bg-secondary/20 text-secondary dark:text-secondary rounded-full text-xs">Growth</span>
-                                <span class="px-3 py-1 bg-secondary/10 dark:bg-secondary/20 text-secondary dark:text-secondary rounded-full text-xs">Healthcare</span>
-                            </div>
-                            <a href="#" class="inline-block text-primary font-medium hover:underline">View Case Study →</a>
-                        </div>
-                    </div>
-
-                    <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 fade-in">
-                        <div class="h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                            <span class="text-gray-500 dark:text-gray-400">Project Image</span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-text-main dark:text-white">AdTech Revenue Optimization</h3>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">Implemented AI-driven bidding algorithm resulting in 45% increase in publisher revenues across programmatic platform.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary rounded-full text-xs">AI/ML</span>
-                                <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary rounded-full text-xs">Revenue Strategy</span>
-                                <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary rounded-full text-xs">Data Analytics</span>
-                            </div>
-                            <a href="#" class="inline-block text-primary font-medium hover:underline">View Case Study →</a>
-                        </div>
-                    </div>
-
-                    <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 fade-in">
-                        <div class="h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                            <span class="text-gray-500 dark:text-gray-400">Project Image</span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-text-main dark:text-white">HCP Engagement Platform</h3>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">Created precision targeting tools for engaging doctors and specialists, driving 40% growth in HCP engagement.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-secondary/10 dark:bg-secondary/20 text-secondary dark:text-secondary rounded-full text-xs">Healthcare</span>
-                                <span class="px-3 py-1 bg-secondary/10 dark:bg-secondary/20 text-secondary dark:text-secondary rounded-full text-xs">Targeting</span>
-                                <span class="px-3 py-1 bg-secondary/10 dark:bg-secondary/20 text-secondary dark:text-secondary rounded-full text-xs">Compliance</span>
-                            </div>
-                            <a href="#" class="inline-block text-primary font-medium hover:underline">View Case Study →</a>
+                        <div class="flex items-center text-primary text-sm font-bold gap-1 group-hover:gap-2 transition-all">
+                            View Case Study <span class="material-symbols-outlined text-lg">arrow_forward</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="mt-16 text-center">
-                    <h2 class="text-2xl font-bold text-text-main dark:text-white mb-6">Industries I've Transformed</h2>
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <span class="px-4 py-2 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary rounded-full">Digital Advertising</span>
-                        <span class="px-4 py-2 bg-secondary/10 dark:bg-secondary/20 text-secondary dark:text-secondary rounded-full">Healthcare</span>
-                        <span class="px-4 py-2 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary rounded-full">Pet Care</span>
-                        <span class="px-4 py-2 bg-secondary/10 dark:bg-secondary/20 text-secondary dark:text-secondary rounded-full">FMCG</span>
-                        <span class="px-4 py-2 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary rounded-full">AdTech</span>
-                        <span class="px-4 py-2 bg-secondary/10 dark:bg-secondary/20 text-secondary dark:text-secondary rounded-full">AI/ML</span>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Personal Note -->
-        <section class="px-6 md:px-10 lg:px-40 py-16 flex justify-center bg-white dark:bg-background-dark">
-            <div class="max-w-[960px] w-full bg-secondary/10 dark:bg-white/5 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10">
-                <div class="w-full md:w-1/3 aspect-[4/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-gray-700 shrink-0 flex items-center justify-center">
-                    <span class="text-gray-500 dark:text-gray-400">Nature Image</span>
-                </div>
-                <div class="flex flex-col gap-4">
-                    <h3 class="text-2xl font-bold text-text-main dark:text-white">Beyond the Boardroom</h3>
-                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                        When I'm not optimizing KPIs or refining product strategies, you can find me exploring the outdoors with my two dogs. The pet industry isn't just a professional interest—it's a personal passion. I believe the best leaders bring their whole selves to work, staying curious and grounded.
-                    </p>
-                    <div class="flex gap-2 text-primary font-medium cursor-pointer hover:text-primary-dark">
-                        <span class="text-sm">Let's connect over coffee</span>
-                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="px-6 md:px-10 lg:px-40 py-16 flex justify-center" id="contact">
-            <div class="max-w-[960px] w-full">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-black text-text-main dark:text-white mb-4">Get In Touch</h2>
-                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">I'm currently open to Director, Sr. Director, and VP opportunities in Product & Commercial Leadership.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div>
-                        <h3 class="text-2xl font-bold text-text-main dark:text-white mb-6">Contact Information</h3>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <div class="mt-1 text-primary">
-                                    <span class="material-symbols-outlined">mail</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg text-text-main dark:text-white">Email</h4>
-                                    <a href="mailto:contact@tiyada.com" class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">contact@tiyada.com</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-4">
-                                <div class="mt-1 text-primary">
-                                    <span class="material-symbols-outlined">location_on</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg text-text-main dark:text-white">Location</h4>
-                                    <p class="text-gray-600 dark:text-gray-400">Available for remote and global opportunities</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-4">
-                                <div class="mt-1 text-primary">
-                                    <span class="material-symbols-outlined">link</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg text-text-main dark:text-white">Professional Links</h4>
-                                    <div class="flex gap-4 mt-2">
-                                        <a href="#" class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" aria-label="LinkedIn">
-                                            <span class="material-symbols-outlined">badge</span>
-                                        </a>
-                                        <a href="#" class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" aria-label="Twitter">
-                                            <span class="material-symbols-outlined">business</span>
-                                        </a>
-                                        <a href="#" class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" aria-label="Email">
-                                            <span class="material-symbols-outlined">mail</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-12">
-                            <h3 class="text-2xl font-bold text-text-main dark:text-white mb-6">Frequently Asked Questions</h3>
-                            
-                            <div class="space-y-4">
-                                <div class="border-b border-gray-200 dark:border-gray-700 pb-4">
-                                    <h4 class="font-bold text-lg text-text-main dark:text-white">What industries do you specialize in?</h4>
-                                    <p class="text-gray-600 dark:text-gray-400 mt-2">I specialize in AdTech, Healthcare, and Pet industries, with deep experience in high-compliance environments requiring both technical and commercial expertise.</p>
-                                </div>
-                                
-                                <div class="border-b border-gray-200 dark:border-gray-700 pb-4">
-                                    <h4 class="font-bold text-lg text-text-main dark:text-white">What leadership roles are you seeking?</h4>
-                                    <p class="text-gray-600 dark:text-gray-400 mt-2">I'm open to Director, Sr. Director, and VP positions in Product Management and Commercial Leadership, focusing on scaling businesses in regulated environments.</p>
-                                </div>
-                                
-                                <div class="pb-4">
-                                    <h4 class="font-bold text-lg text-text-main dark:text-white">How do you approach product-market fit in complex industries?</h4>
-                                    <p class="text-gray-600 dark:text-gray-400 mt-2">I bridge the gap between financial rigor and commercial product success, using data-driven decisions while maintaining customer-centric vision.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-2xl font-bold text-text-main dark:text-white mb-6">Send a Message</h3>
-                        
-                        <form id="contact-form" class="space-y-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Full Name</label>
-                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-background-dark text-text-main dark:text-white focus:ring-primary focus:border-primary transition-colors">
-                            </div>
-                            
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address</label>
-                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-background-dark text-text-main dark:text-white focus:ring-primary focus:border-primary transition-colors">
-                            </div>
-                            
-                            <div>
-                                <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
-                                <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-background-dark text-text-main dark:text-white focus:ring-primary focus:border-primary transition-colors">
-                            </div>
-                            
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Message</label>
-                                <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-background-dark text-text-main dark:text-white focus:ring-primary focus:border-primary transition-colors"></textarea>
-                            </div>
-                            
-                            <button type="submit" class="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary-dark text-white text-base font-bold shadow-lg shadow-primary/30 transition-colors">
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Footer -->
-        <footer class="bg-text-main dark:bg-black text-white py-12 px-6 md:px-10 lg:px-40" id="contact">
-            <div class="max-w-[960px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex flex-col gap-2 text-center md:text-left">
-                    <h4 class="text-xl font-bold">Tiyada Maiwong</h4>
-                    <p class="text-gray-400 text-sm">Executive Product Leadership</p>
-                </div>
+        <footer class="bg-white dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800 py-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <p class="text-sm text-text-muted dark:text-gray-500">© 2025 Tiyada Maiwong. All rights reserved.</p>
                 <div class="flex gap-6">
-                    <a class="text-gray-400 hover:text-white transition-colors" href="#about">Home</a>
-                    <a class="text-gray-400 hover:text-white transition-colors" href="#about-section">About</a>
-                    <a class="text-gray-400 hover:text-white transition-colors" href="#contact">Contact</a>
+                    <a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white transition-colors" href="https://www.linkedin.com/in/tiyada-maiwong" target="_blank">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                        </svg>
+                    </a>
+                    <a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white transition-colors" href="mailto:tiyada.maiwong@example.com" target="_blank">
+                        <span class="sr-only">Email</span>
+                        <span class="material-symbols-outlined text-[20px]">mail</span>
+                    </a>
                 </div>
-            </div>
-            <div class="max-w-[960px] mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-xs">
-                © 2025 Tiyada Maiwong. All rights reserved.
             </div>
         </footer>
     </div>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 </html>

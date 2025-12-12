@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Experience &amp; Portfolio - Tiyada Maiwong</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1337",
+                        "background-light": "#ffffff",
+                        "background-dark": "#221013",
+                        "peach": "#ffccbc",
+                        "peach-light": "#fff5f2",
+                        "peach-dark": "#e6a89c",
+                        "text-main": "#181112",
+                        "text-muted": "#5c4a4e"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .modal {
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        .modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .modal-content {
+            transform: scale(0.95);
+            transition: transform 0.3s ease-in-out;
+        }
+        .modal.active .modal-content {
+            transform: scale(1);
+        }.modal-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        .modal-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .modal-scroll::-webkit-scrollbar-thumb {
+            background: #ec1337;
+            border-radius: 4px;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-[#f4f0f1] font-display antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 flex items-center justify-between border-b border-solid border-b-[#f4f0f1] dark:border-b-[#3a2024] bg-white/95 dark:bg-[#221013]/95 backdrop-blur px-6 py-3 lg:px-40 transition-colors duration-300">
+<div class="flex items-center gap-4 text-[#181112] dark:text-white">
+<div class="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">diamond</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Tiyada Maiwong</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-9">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="../../index.html">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="../../about_me/code.html">About</a>
+<a class="text-sm font-bold text-primary" href="code.html">Experience</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="../../skills_&_expertise/code.html">Skills</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="../../index.html#portfolio">Portfolio</a>
+</nav>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-red-700 text-white text-sm font-bold leading-normal tracking-[0.015em] transition-all">
+<span class="truncate">Contact Me</span>
+</button>
+</div>
+<div class="md:hidden text-[#181112] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</header>
+<main class="layout-container flex h-full grow flex-col items-center">
+<div class="layout-content-container flex flex-col max-w-[1280px] w-full px-6 md:px-10 lg:px-0 py-16">
+<div class="flex flex-col gap-8 mb-16 text-center lg:text-left">
+<div class="flex flex-col gap-2">
+<span class="text-primary font-bold tracking-widest uppercase text-xs">Executive Portfolio</span>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em] text-[#181112] dark:text-white mb-2">
+                            Commercial &amp; Digital Product<br class="hidden lg:block"/> Leadership Across Industries.
+                        </h1>
+<h2 class="text-xl md:text-2xl font-medium text-text-muted dark:text-[#d1b0b6] leading-relaxed max-w-4xl">
+                            A Collection of Work Shaped by Strategy, Creativity &amp; Impact.
+                        </h2>
+</div>
+</div>
+<div class="mb-12 overflow-x-auto pb-4">
+<div class="flex gap-4 min-w-max">
+<button class="px-5 py-2 bg-primary text-white rounded-full text-sm font-bold shadow-md hover:bg-red-700 transition-colors">All Work</button>
+<button class="px-5 py-2 bg-peach-light dark:bg-[#3a2024] text-text-muted dark:text-[#d1b0b6] rounded-full text-sm font-medium hover:bg-primary/10 transition-colors border border-transparent hover:border-primary/20">Digital Transformation</button>
+<button class="px-5 py-2 bg-peach-light dark:bg-[#3a2024] text-text-muted dark:text-[#d1b0b6] rounded-full text-sm font-medium hover:bg-primary/10 transition-colors border border-transparent hover:border-primary/20">Media Platforms</button>
+<button class="px-5 py-2 bg-peach-light dark:bg-[#3a2024] text-text-muted dark:text-[#d1b0b6] rounded-full text-sm font-medium hover:bg-primary/10 transition-colors border border-transparent hover:border-primary/20">Product Launch</button>
+<button class="px-5 py-2 bg-peach-light dark:bg-[#3a2024] text-text-muted dark:text-[#d1b0b6] rounded-full text-sm font-medium hover:bg-primary/10 transition-colors border border-transparent hover:border-primary/20">Healthcare &amp; Pet</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group cursor-pointer bg-white dark:bg-[#2f1b1e] rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-[#3a2024] card-hover transition-all duration-300">
+<div class="aspect-video bg-gray-200 dark:bg-[#3a2024] relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity"></div>
+<img alt="Digital advertising transformation" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGjzk7PC9Z66p0QCNh0IM5sXMhRDxaKnz01RmdEDo_1mXFUu73y0lJXx2egmr5iqtIIjqVAMYXd6WVp36JL7SietMPx9pVbZF3SBTmqSESAEHPnT4_PVXgYdwGTr5yOU_9HfNmT_bq_MWHHU0-pYxTJjYTCTY1BUz6O0N4rsTWmoJ-5nJlJahuU0ItGpUS9GKFlD_mRSUtkfsjjq5TQ9TQrI6cM2TPxYEKCEba2gZf9qaeSNdHMRKwcF-sqDDJJpLRYNoLCEUwDb4"/>
+<div class="absolute bottom-4 left-4 z-20">
+<span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider rounded-md mb-1">Shoppertainment and Social Commerce</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-[#181112] dark:text-white mb-2 group-hover:text-primary transition-colors">Digital Advertising Transformation</h3>
+<p class="text-sm text-text-muted dark:text-[#d1b0b6] line-clamp-2 mb-4">
+                                Leading strategic overhauls for major ad-tech stacks, optimizing for programmatic efficiency and yield management.
+                            </p>
+</div>
+</div>
+<div class="group cursor-pointer bg-white dark:bg-[#2f1b1e] rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-[#3a2024] card-hover transition-all duration-300">
+<div class="aspect-video bg-gray-200 dark:bg-[#3a2024] relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity"></div>
+<img alt="Performance media" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG4SSBTNaO7DRZob6dBcllOKOYrPK5Q0x-a1dCZBZnAfxALXyIhAfASMVint7MkSDwoWcILYA3Jqgu3kbHTjSyvEppZ13opf5Q8qBU4Q0bb88-rfja65_cyr7ccGQfv5QiZs4LlAkyfkYwsw8EnMX3qODdAcUYUxwIIhJ19I__M3JPlosYmqEJtZo3HaeTUp8zyxeA2uMlhg68MJ5EeVwRcH0zxJxaTnaH6d2yrbfxd7MBMzpaWaN_KvUa_durwgbVG37-rlkmBr4"/>
+<div class="absolute bottom-4 left-4 z-20">
+<span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider rounded-md mb-1">Media</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-[#181112] dark:text-white mb-2 group-hover:text-primary transition-colors">Performance Media &amp; Campaign Platforms</h3>
+<p class="text-sm text-text-muted dark:text-[#d1b0b6] line-clamp-2 mb-4">
+                                Designing and scaling unified campaign management dashboards that drive real-time ROAS optimization.
+                            </p>
+</div>
+</div>
+<div class="group cursor-pointer bg-white dark:bg-[#2f1b1e] rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-[#3a2024] card-hover transition-all duration-300">
+<div class="aspect-video bg-gray-200 dark:bg-[#3a2024] relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity"></div>
+<img alt="Pet &amp; Healthcare" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2zawUCBjXqI8BTPef5INJ_4Nh5ASDqT7h-itZZCRWFRg7-v207H9gJco9KKfJ8KCIPHHaiK78YBVyvvhn9y_YxKCMISgN-oz_ePE54RRCfhj3pMZQMvkdf1bA2p6lcYU5bJYmsnpEmUCnPMetP8Eqx9vd-NjxWiZEYwno8LTogsKFUfovQXgFadsRFMk1p48-u4BQzWycvNfgdOArqcypEQWtf3kYlzD4QykuntqOf1d0yXxJnfe4CJfcFrioBkNgdLmUU6eFygU"/>
+<div class="absolute bottom-4 left-4 z-20">
+<span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider rounded-md mb-1">Health &amp; Pet</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-[#181112] dark:text-white mb-2 group-hover:text-primary transition-colors">Pet Products &amp; Healthcare Digital Solutions</h3>
+<p class="text-sm text-text-muted dark:text-[#d1b0b6] line-clamp-2 mb-4">
+                                Bridging the gap between veterinary care and digital consumer products through integrated app ecosystems.
+                            </p>
+</div>
+</div>
+<div class="group cursor-pointer bg-white dark:bg-[#2f1b1e] rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-[#3a2024] card-hover transition-all duration-300">
+<div class="aspect-video bg-gray-200 dark:bg-[#3a2024] relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity"></div>
+<img alt="eCommerce" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrHM0NPYmgigDqfeE_KfdE8TFaxR-r7y5anKH79nTmlVa-yrIEDZzwUa6gFdcMSd03VlGJ6oEU6MAGA21W6UjUZunhf2sDYeiwzT6QW5CySsRUn_6L8KqmHPvLBK5khriK3Ng9dhin8kP741xfDvvADkygXZnVp1UODJc5TSZC6JhZWP1nQ6-dEgUin5Ko_F_Rpe8KO384l50QK8YwTv7NIZC-Yw74Gx69SE_BcLtKli1HXeH_vMGKyML6Mtl-OemQcEyT5tB60Dk"/>
+<div class="absolute bottom-4 left-4 z-20">
+<span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider rounded-md mb-1">eCommerce</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-[#181112] dark:text-white mb-2 group-hover:text-primary transition-colors">eCommerce &amp; New Product Development</h3>
+<p class="text-sm text-text-muted dark:text-[#d1b0b6] line-clamp-2 mb-4">
+                                From concept to cart: end-to-end product development for high-volume retail platforms.
+                            </p>
+</div>
+</div>
+<div class="group cursor-pointer bg-white dark:bg-[#2f1b1e] rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-[#3a2024] card-hover transition-all duration-300">
+<div class="aspect-video bg-gray-200 dark:bg-[#3a2024] relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity"></div>
+<img alt="Publisher Monetization" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq34nn6p89CPaX4WoH7FJg1cdPOad8TMCvt6JlkK6v25uzQQUO-BHmOKvKBJrkr6hJFkrqA4wSC212xizpPlZPEyTHYXvgpq3fQl95QC9d_sxLT95ycYqiGlnVAD84ABVpIEv7eU7HKFOjy-DyUlV-8Jn4w8PNfiZ1jn5nJkaSTuJvcU7XIekyAD5YILhQ2Ll_yfT95PxyEOugOcJzzCi8oymEuIqPoXjaZDxaaHycQqogEq8uLJnX0KIJ6amG1855m21Setopt8E"/>
+<div class="absolute bottom-4 left-4 z-20">
+<span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider rounded-md mb-1">Monetization</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-[#181112] dark:text-white mb-2 group-hover:text-primary transition-colors">Native Ads &amp; Publisher Monetization</h3>
+<p class="text-sm text-text-muted dark:text-[#d1b0b6] line-clamp-2 mb-4">
+                                Increasing yield for premium publishers through non-intrusive native advertising formats.
+                            </p>
+</div>
+</div>
+<div class="group cursor-pointer bg-white dark:bg-[#2f1b1e] rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-[#3a2024] card-hover transition-all duration-300">
+<div class="aspect-video bg-gray-200 dark:bg-[#3a2024] relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity"></div>
+<img alt="Clinic Operations" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiuA3t5xxlntpiq6vmY5oUh-OEDqOcBBmW1WHO9D7McQ-wIdiw-XMr8wpB2mHMbWtvyP6f9JGUKM2kQcE30fzFq_Uhi4_KzhHziwHjUuSPGd5PImyj2_bfq6T0ywXk0IJpsotEIzKwW8DVZq5emSyzuunTiDeFdbhIjutO7ITbW-u-kc9Yqxf-3aA85c1-4rRX6eznrZvtWuxl-qEGZ4YVcoA3KITKdeUM4YXu_92Qs6_JYaPOUNp6rD6ESFlVx1IhVwSWK_PI7vw"/>
+<div class="absolute bottom-4 left-4 z-20">
+<span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider rounded-md mb-1">Operations</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-[#181112] dark:text-white mb-2 group-hover:text-primary transition-colors">Clinic Operations &amp; Digital Service Flows</h3>
+<p class="text-sm text-text-muted dark:text-[#d1b0b6] line-clamp-2 mb-4">
+                                Digitizing the patient journey for multi-location clinics to improve operational efficiency.
+                            </p>
+</div>
+</div>
+</div>
+<div class="w-full h-px bg-gray-100 dark:bg-[#3a2024] my-20"></div>
+<div class="flex flex-col w-full mb-10">
+<div class="flex flex-col gap-2 mb-12">
+<span class="text-primary font-bold tracking-widest uppercase text-xs">Professional Journey</span>
+<h2 class="text-3xl md:text-4xl font-black text-[#181112] dark:text-white tracking-tight">Experience &amp; Leadership</h2>
+</div>
+<div class="relative border-l-2 border-peach dark:border-[#3a2024] ml-3 md:ml-4 space-y-16">
+<div class="relative pl-8 md:pl-12 group">
+<div class="absolute -left-[9px] top-1.5 h-5 w-5 rounded-full border-4 border-white dark:border-[#221013] bg-primary group-hover:scale-125 transition-transform duration-300"></div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+<div>
+<h3 class="text-xl md:text-2xl font-bold text-[#181112] dark:text-white">eCommerce &amp; Commercials</h3>
+<p class="text-primary font-bold text-sm">CPGs, Lifestyle, Aesthetics &amp; Wellness • 2020 – Present</p>
+</div>
+<span class="self-start sm:self-auto text-[10px] font-bold uppercase tracking-widest bg-peach-light dark:bg-[#3a2024] text-text-muted dark:text-[#d1b0b6] px-3 py-1 rounded-full border border-peach/50 dark:border-transparent">ECOMMERCE &amp; HEALTHCARE</span>
+</div>
+<p class="text-text-muted dark:text-[#d1b0b6] mb-6 max-w-3xl leading-relaxed">
+                                Driving the product vision and commercial strategy for programmatic advertising suites. Oversaw the integration of AI-driven yield management tools.
+                            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-start gap-3 p-4 rounded-lg bg-gray-50 dark:bg-[#2f1b1e] border border-gray-100 dark:border-[#3a2024]">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+<div>
+<span class="block text-2xl font-black text-[#181112] dark:text-white mb-1">$45M+</span>
+<p class="text-xs font-medium text-text-muted dark:text-[#d1b0b6] leading-snug">Annual revenue growth driven through new publisher monetization products.</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-4 rounded-lg bg-gray-50 dark:bg-[#2f1b1e] border border-gray-100 dark:border-[#3a2024]">
+<span class="material-symbols-outlined text-primary">group</span>
+<div>
+<span class="block text-2xl font-black text-[#181112] dark:text-white mb-1">30+ Team</span>
+<p class="text-xs font-medium text-text-muted dark:text-[#d1b0b6] leading-snug">Managed cross-functional teams across product, engineering, and sales.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative pl-8 md:pl-12 group">
+<div class="absolute -left-[9px] top-1.5 h-5 w-5 rounded-full border-4 border-white dark:border-[#221013] bg-peach-dark group-hover:bg-primary group-hover:scale-125 transition-all duration-300"></div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+<div>
+<h3 class="text-xl md:text-2xl font-bold text-[#181112] dark:text-white">Digital Media &amp; Strategic Operations</h3>
+<p class="text-primary font-bold text-sm">Global AdTech Solutions &amp; Digital Media • 2015 - 2019</p>
+</div>
+<span class="self-start sm:self-auto text-[10px] font-bold uppercase tracking-widest bg-peach-light dark:bg-[#3a2024] text-text-muted dark:text-[#d1b0b6] px-3 py-1 rounded-full border border-peach/50 dark:border-transparent">ADTECH &amp; MEDIA</span>
+</div>
+<p class="text-text-muted dark:text-[#d1b0b6] mb-6 max-w-3xl leading-relaxed">
+                                Led digital transformation initiatives, launching a direct-to-consumer platform and optimizing performance media spend.
+                            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-start gap-3 p-4 rounded-lg bg-gray-50 dark:bg-[#2f1b1e] border border-gray-100 dark:border-[#3a2024]">
+<span class="material-symbols-outlined text-primary">shopping_cart</span>
+<div>
+<span class="block text-2xl font-black text-[#181112] dark:text-white mb-1">200%</span>
+<p class="text-xs font-medium text-text-muted dark:text-[#d1b0b6] leading-snug">Increase in online sales conversion rate via UX optimization.</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-4 rounded-lg bg-gray-50 dark:bg-[#2f1b1e] border border-gray-100 dark:border-[#3a2024]">
+<span class="material-symbols-outlined text-primary">ads_click</span>
+<div>
+<span class="block text-2xl font-black text-[#181112] dark:text-white mb-1">3.5x ROAS</span>
+<p class="text-xs font-medium text-text-muted dark:text-[#d1b0b6] leading-snug">Achieved through data-driven programmatic campaign management.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative pl-8 md:pl-12 group">
+<div class="absolute -left-[9px] top-1.5 h-5 w-5 rounded-full border-4 border-white dark:border-[#221013] bg-peach-dark group-hover:bg-primary group-hover:scale-125 transition-all duration-300"></div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+<div>
+<h3 class="text-xl md:text-2xl font-bold text-[#181112] dark:text-white">Analyst &amp; Marketing Specialist</h3>
+<p class="text-primary font-bold text-sm">Finance &amp; B2B • 2006 - 2014</p>
+</div>
+<span class="self-start sm:self-auto text-[10px] font-bold uppercase tracking-widest bg-peach-light dark:bg-[#3a2024] text-text-muted dark:text-[#d1b0b6] px-3 py-1 rounded-full border border-peach/50 dark:border-transparent">ANALYTICS &amp; STRATEGY</span>
+</div>
+<p class="text-text-muted dark:text-[#d1b0b6] mb-6 max-w-3xl leading-relaxed">
+                                Consulted for multi-location clinics to digitize patient journeys and improve operational efficiency through custom software solutions.
+                            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-start gap-3 p-4 rounded-lg bg-gray-50 dark:bg-[#2f1b1e] border border-gray-100 dark:border-[#3a2024]">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<span class="block text-2xl font-black text-[#181112] dark:text-white mb-1">-30% Wait</span>
+<p class="text-xs font-medium text-text-muted dark:text-[#d1b0b6] leading-snug">Reduction in patient wait times via digital check-in flows.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-24 flex justify-center pb-10">
+<div class="w-full rounded-2xl bg-gradient-to-r from-primary to-[#ff4757] p-8 md:p-12 text-center shadow-xl text-white relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+<h2 class="text-2xl md:text-3xl font-bold mb-4 relative z-10">Ready to drive impact together?</h2>
+<p class="text-white/90 mb-8 max-w-lg mx-auto relative z-10">Available for Director and VP level roles in Commercial Product Management.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+<button class="px-8 py-3 bg-white text-primary rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-sm">
+                                Download Full Resume
+                            </button>
+<button class="px-8 py-3 bg-black/20 text-white border border-white/30 rounded-lg font-bold hover:bg-black/30 transition-colors">
+                                Contact Me
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 py-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+<p class="text-sm text-text-muted dark:text-gray-500">© 2025 Tiyada Maiwong. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white transition-colors" href="../../index.html">Home</a>
+<a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white transition-colors" href="../../about_me/code.html">About</a>
+<a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white transition-colors" href="code.html">Experience</a>
+<a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white transition-colors" href="../../skills_&_expertise/code.html">Skills</a>
+<a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white transition-colors" href="../../contact/code.html">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>
