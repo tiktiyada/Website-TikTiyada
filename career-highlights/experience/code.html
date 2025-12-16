@@ -85,10 +85,38 @@
 <span class="truncate">Contact Me</span>
 </button>
 </div>
-<div class="md:hidden text-[#181112] dark:text-white">
+<button id="mobile-menu-button" class="md:hidden flex items-center justify-center p-2 text-[#181112] dark:text-white">
 <span class="material-symbols-outlined">menu</span>
+</button>
+<div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-[#221013] border-b border-solid border-b-[#f4f0f1] dark:border-b-[#3a2024] py-4 shadow-lg z-50">
+<nav class="flex flex-col px-6 lg:px-40 gap-4">
+<a class="text-sm font-medium hover:text-primary transition-colors py-2" href="../../index.html">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors py-2" href="../../about_me/code.html">About</a>
+<a class="text-sm font-bold text-primary py-2" href="code.html">Experience</a>
+<a class="text-sm font-medium hover:text-primary transition-colors py-2" href="../../skills_&_expertise/code.html">Skills</a>
+<a class="text-sm font-medium hover:text-primary transition-colors py-2" href="../../index.html#portfolio">Portfolio</a>
+<a class="text-sm font-medium hover:text-primary transition-colors py-2" href="../../contact/code.html">Contact</a>
+</nav>
 </div>
 </header>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+mobileMenuButton.addEventListener('click', function(e) {
+e.stopPropagation();
+mobileMenu.classList.toggle('hidden');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', function(e) {
+if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
+mobileMenu.classList.add('hidden');
+}
+});
+});
+</script>
 <main class="layout-container flex h-full grow flex-col items-center">
 <div class="layout-content-container flex flex-col max-w-[1280px] w-full px-6 md:px-10 lg:px-0 py-16">
 <div class="flex flex-col gap-8 mb-16 text-center lg:text-left">
@@ -296,14 +324,10 @@
 <div class="w-full rounded-2xl bg-gradient-to-r from-primary to-[#ff4757] p-8 md:p-12 text-center shadow-xl text-white relative overflow-hidden">
 <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
 <h2 class="text-2xl md:text-3xl font-bold mb-4 relative z-10">Ready to drive impact together?</h2>
-<p class="text-white/90 mb-8 max-w-lg mx-auto relative z-10">Available for Director and VP level roles in Commercial Product Management.</p>
 <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
-<button class="px-8 py-3 bg-white text-primary rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-sm">
-                                Download Full Resume
-                            </button>
-<button class="px-8 py-3 bg-black/20 text-white border border-white/30 rounded-lg font-bold hover:bg-black/30 transition-colors">
+<a href="../../contact/code.html" class="px-8 py-3 bg-black/20 text-white border border-white/30 rounded-lg font-bold hover:bg-black/30 transition-colors flex items-center justify-center">
                                 Contact Me
-                            </button>
+                            </a>
 </div>
 </div>
 </div>

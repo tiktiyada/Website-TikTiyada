@@ -60,12 +60,40 @@
 <span class="material-symbols-outlined text-[18px]">download</span>
 </button> -->
 </div>
-<button class="md:hidden flex items-center justify-center p-2 text-[#181112] dark:text-white">
+<button id="mobile-menu-button" class="md:hidden flex items-center justify-center p-2 text-[#181112] dark:text-white">
 <span class="material-symbols-outlined">menu</span>
 </button>
+<div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-background-dark border-b border-[#f4f0f1] dark:border-[#3a2e30] py-4 shadow-lg z-50">
+<nav class="flex flex-col px-4 gap-4">
+<a class="text-sm font-medium leading-normal text-[#181112] hover:text-primary dark:text-gray-200 dark:hover:text-primary transition-colors py-2" href="../index.html">Home</a>
+<a class="text-sm font-medium leading-normal text-[#181112] hover:text-primary dark:text-gray-200 dark:hover:text-primary transition-colors py-2" href="../about_me/code.html">About</a>
+<a class="text-sm font-medium leading-normal text-[#181112] hover:text-primary dark:text-gray-200 dark:hover:text-primary transition-colors py-2" href="../career-highlights/experience/code.html">Experience</a>
+<a class="text-sm font-medium leading-normal text-[#181112] hover:text-primary dark:text-gray-200 dark:hover:text-primary transition-colors py-2" href="../skills_&_expertise/code.html">Skills</a>
+<a class="text-sm font-medium leading-normal text-[#181112] hover:text-primary dark:text-gray-200 dark:hover:text-primary transition-colors py-2" href="../index.html#portfolio">Portfolio</a>
+<a class="text-sm font-medium leading-normal text-primary font-bold dark:text-primary transition-colors py-2" href="code.html">Contact</a>
+</nav>
+</div>
 </div>
 </div>
 </header>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+mobileMenuButton.addEventListener('click', function(e) {
+e.stopPropagation();
+mobileMenu.classList.toggle('hidden');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', function(e) {
+if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
+mobileMenu.classList.add('hidden');
+}
+});
+});
+</script>
 <main class="flex-1 w-full">
 <div class="relative w-full px-4 md:px-10 py-16 md:py-24 flex justify-center bg-background-off dark:bg-background-dark">
 <div class="w-full max-w-[1024px] grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -79,31 +107,6 @@
                         For opportunities, collaborations, or product leadership roles—feel free to reach out. I am always open to discussing how we can drive commercial impact through strategic product management.
                     </p>
 </div>
-<div class="flex flex-col gap-4 mt-4">
-<div class="text-sm font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500">
-                        Direct Channels
-                    </div>
-<div class="flex flex-col md:flex-row gap-4">
-<a class="group flex flex-1 items-center gap-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#2a1d20] p-4 transition-all hover:border-primary hover:shadow-lg" href="mailto:tik.maiwong@example.com">
-<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined">mail</span>
-</div>
-<div>
-<h3 class="font-bold text-[#181112] dark:text-white">Email Me</h3>
-<p class="text-sm text-gray-500">tik.maiwong@example.com</p>
-</div>
-</a>
-<a class="group flex flex-1 items-center gap-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#2a1d20] p-4 transition-all hover:border-[#0077b5] hover:shadow-lg" href="https://www.linkedin.com/in/tiyada">
-<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#0077b5]/10 text-[#0077b5] group-hover:bg-[#0077b5] group-hover:text-white transition-colors">
-<span class="material-symbols-outlined">work</span>
-</div>
-<div>
-<h3 class="font-bold text-[#181112] dark:text-white">LinkedIn</h3>
-<p class="text-sm text-gray-500">Connect Professionally</p>
-</div>
-</a>
-</div>
-</div>
 <div class="flex items-center gap-2 text-sm text-gray-500 mt-2">
 <span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
                     Based in Bangkok, Thailand (Open to Relocation)
@@ -112,24 +115,9 @@
 <div class="flex flex-col gap-6 bg-white dark:bg-[#2a1d20] p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 relative overflow-hidden">
 <div class="absolute top-0 right-0 w-32 h-32 bg-peach/30 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
 <h2 class="text-2xl font-bold text-[#181112] dark:text-white z-10">Send a Message</h2>
-<form class="flex flex-col gap-5 z-10">
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-[#181112] dark:text-gray-300" for="name">Name</label>
-<input class="w-full rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-white/5 px-4 py-3 text-base outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all dark:text-white placeholder:text-gray-400" id="name" name="name" placeholder="Your Name" type="text"/>
+<div class="z-10">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScVseRtN6slQ5xH684tBmNokszASdmzLxLlKWZYkLVL1r7h1Q/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-[#181112] dark:text-gray-300" for="email">Email Address</label>
-<input class="w-full rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-white/5 px-4 py-3 text-base outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all dark:text-white placeholder:text-gray-400" id="email" name="email" placeholder="you@company.com" type="email"/>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-[#181112] dark:text-gray-300" for="message">Message</label>
-<textarea class="w-full rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-white/5 px-4 py-3 text-base outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all dark:text-white placeholder:text-gray-400 resize-none" id="message" name="message" placeholder="How can we work together?" rows="4"></textarea>
-</div>
-<button class="mt-2 flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-primary hover:bg-primary-dark text-white px-6 py-4 font-bold transition-all transform hover:-translate-y-0.5 hover:shadow-lg" type="button">
-<span>Send Message</span>
-<span class="material-symbols-outlined text-[20px]">send</span>
-</button>
-</form>
 </div>
 </div>
 </div>

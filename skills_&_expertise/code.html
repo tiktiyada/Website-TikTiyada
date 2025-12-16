@@ -48,6 +48,18 @@
 <a class="text-sm font-bold text-primary" href="code.html">Skills</a>
 <a class="text-sm font-medium hover:text-primary transition-colors text-text-main dark:text-gray-200" href="../contact/code.html">Contact</a>
 </nav>
+<button id="mobile-menu-button" class="md:hidden flex items-center justify-center p-2 text-text-main dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-background-dark border-b border-gray-100 dark:border-gray-800 py-4 shadow-lg z-50">
+<nav class="flex flex-col px-4 sm:px-6 lg:px-8 gap-4">
+<a class="text-sm font-medium hover:text-primary transition-colors text-text-main dark:text-gray-200 py-2" href="../index.html">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-text-main dark:text-gray-200 py-2" href="../about_me/code.html">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-text-main dark:text-gray-200 py-2" href="../career-highlights/experience/code.html">Experience</a>
+<a class="text-sm font-bold text-primary py-2" href="code.html">Skills</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-text-main dark:text-gray-200 py-2" href="../contact/code.html">Contact</a>
+</nav>
+</div>
 <!-- <div class="flex items-center">
 <button class="bg-primary hover:bg-primary-dark text-white text-sm font-bold py-2 px-4 rounded-lg transition-colors shadow-sm flex items-center gap-2">
 <span class="material-symbols-outlined text-[20px]">download</span>
@@ -56,6 +68,24 @@
 </div> -->
 </div>
 </header>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+mobileMenuButton.addEventListener('click', function(e) {
+e.stopPropagation();
+mobileMenu.classList.toggle('hidden');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', function(e) {
+if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
+mobileMenu.classList.add('hidden');
+}
+});
+});
+</script>
 <main class="flex flex-col min-h-screen">
 <section class="relative bg-background-light dark:bg-background-dark border-b border-gray-100 dark:border-gray-800">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">

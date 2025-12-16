@@ -518,16 +518,46 @@
                                         <h2 class="text-lg font-bold leading-tight tracking-tight">Tiyada Maiwong</h2>
                                     </div>
                                     <div class="hidden md:flex gap-8 items-center">
-                                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary">Home</a>
-                                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary">About</a>
-                                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary">Projects</a>
-                                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary">Skills</a>
-                                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary">Contact</a>
+                                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="index.html">Home</a>
+                                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="about_me/code.html">About</a>
+                                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="career-highlights/experience/code.html">Projects</a>
+                                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="skills_&_expertise/code.html">Skills</a>
+                                        <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary" href="contact/code.html">Contact</a>
+                                    </div>
+                                    <button id="mobile-menu-button" class="md:hidden flex items-center justify-center p-2 text-text-main dark:text-white">
+                                        <span class="material-symbols-outlined">menu</span>
+                                    </button>
+                                    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 py-4 shadow-lg z-50">
+                                        <nav class="flex flex-col px-6 md:px-10 lg:px-40 gap-4">
+                                            <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary py-2" href="index.html">Home</a>
+                                            <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary py-2" href="about_me/code.html">About</a>
+                                            <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary py-2" href="career-highlights/experience/code.html">Projects</a>
+                                            <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary py-2" href="skills_&_expertise/code.html">Skills</a>
+                                            <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary py-2" href="contact/code.html">Contact</a>
+                                        </nav>
                                     </div>
                                 </div>
                             </nav>
                         </div>
                     </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const mobileMenuButton = document.getElementById('mobile-menu-button');
+                            const mobileMenu = document.getElementById('mobile-menu');
+
+                            mobileMenuButton.addEventListener('click', function(e) {
+                                e.stopPropagation();
+                                mobileMenu.classList.toggle('hidden');
+                            });
+
+                            // Close menu when clicking outside
+                            document.addEventListener('click', function(e) {
+                                if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
+                                    mobileMenu.classList.add('hidden');
+                                }
+                            });
+                        });
+                    </script>
                 </div>
             </div>
         </section>
